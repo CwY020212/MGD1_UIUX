@@ -6,6 +6,9 @@ using UnityEngine;
 public class Interact : MonoBehaviour
 {
     public Detect Detection;
+    [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject HidingCanvas;
+    [SerializeField] private GameObject MainUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -219,6 +222,14 @@ public class Interact : MonoBehaviour
                     Debug.Log("Note14 Gotcha");
                 }
             }
+        }
+
+        //Hide
+        if(StaticData.isHiding == true)
+        {
+            MainUI.SetActive(false);
+            Player.SetActive(false);
+            HidingCanvas.SetActive(true);
         }
     }
 }

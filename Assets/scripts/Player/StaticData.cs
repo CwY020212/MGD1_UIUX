@@ -41,4 +41,8 @@ public class StaticData : MonoBehaviour
     public static bool Cloak;
     public static bool Mimicking;
 
+    //Status
+    public static bool isHiding;
+    public static bool isStatue;
+
 }
