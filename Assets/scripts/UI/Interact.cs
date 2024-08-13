@@ -9,16 +9,32 @@ public class Interact : MonoBehaviour
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject HidingCanvas;
     [SerializeField] private GameObject MainUI;
+    public bool Clicked = false;
+    private const float Cooldown_Period = 10.0f;
+    public float Cooldown_Time = Cooldown_Period;
+    public Exit Check;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(Cooldown_Time);
+        if (Check.InCoolDown == true)
+        {
+            Cooldown_Time -= Time.deltaTime;
+            if(Cooldown_Time<=0.0f)
+            {
+                Check.InCoolDown = false;
+                Cooldown_Time = Cooldown_Period;
+                Debug.Log("coolDown finish");
+            }
+        }
     }
 
     public void OnButtonClick()
@@ -224,12 +240,16 @@ public class Interact : MonoBehaviour
             }
         }
 
-        //Hide
-        if(StaticData.isHiding == true)
+        //Hide & statue
+        if (Clicked == false && Cooldown_Time >= 10.0f)
         {
-            MainUI.SetActive(false);
-            Player.SetActive(false);
-            HidingCanvas.SetActive(true);
+            if (StaticData.isHiding == true || StaticData.isStatue == true)
+            {
+                Clicked = true;
+                MainUI.SetActive(false);
+                Player.SetActive(false);
+                HidingCanvas.SetActive(true);
+            }
         }
     }
 }

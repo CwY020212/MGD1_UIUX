@@ -108,6 +108,12 @@ public class Detect : MonoBehaviour
             StaticData.isHiding = true;
             Debug.Log("Hiding in Range");
         }
+
+        if(collision.gameObject.CompareTag("StatueSpot"))
+        {
+            StaticData.isStatue = true;
+            Debug.Log("Statue in Range");
+        }
     }
 
     public void OnTriggerExit2D(Collider2D collision)
@@ -140,12 +146,6 @@ public class Detect : MonoBehaviour
                 count++;
             }
             Changes = Notes;
-        }
-
-        if (collision.gameObject.CompareTag("HidingSpot"))
-        {
-            StaticData.isHiding = false;
-            Debug.Log("Player not in Range");
         }
     }
 

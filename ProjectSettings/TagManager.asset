@@ -8,6 +8,7 @@ TagManager:
   - Ability
   - Notes
   - HidingSpot
+  - StatueSpot
   layers:
   - Default
   - TransparentFX

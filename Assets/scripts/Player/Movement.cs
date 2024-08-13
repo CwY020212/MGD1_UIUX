@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     private float movespeed = 500.0f;
     private float hor;
     private float Ver;
+    public bool isPaused = false;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -17,8 +18,11 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hor = VirtualJoystick.GetAxis("Horizontal", 0);
-        Ver = VirtualJoystick.GetAxis("Vertical", 0);
-        rb.velocity = new Vector2(hor * movespeed * Time.deltaTime, Ver * movespeed * Time.deltaTime);
+        if (isPaused == false)
+        {
+            hor = VirtualJoystick.GetAxis("Horizontal", 0);
+            Ver = VirtualJoystick.GetAxis("Vertical", 0);
+            rb.velocity = new Vector2(hor * movespeed * Time.deltaTime, Ver * movespeed * Time.deltaTime);
+        }
     }
 }

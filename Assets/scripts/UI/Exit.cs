@@ -8,6 +8,10 @@ public class Exit : MonoBehaviour
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject HidingCanvas;
     [SerializeField] private GameObject MainUI;
+    private const float timeWanted = 10.0f; // 
+    private float timer = timeWanted;
+    public Interact Check;
+    public bool InCoolDown = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,16 +23,45 @@ public class Exit : MonoBehaviour
     void Update()
     {
 
+        if (Check.Clicked == true)
+        {
+            timer -= Time.deltaTime;
+        }
+        if (timer <= 0.0f)
+        {
+            StaticData.isHiding = false;
+            StaticData.isStatue = false;
+            Check.Clicked = false;
+            Player.SetActive(true);
+            HidingCanvas.SetActive(false);
+            MainUI.SetActive(true);
+            timer = timeWanted;
+            InCoolDown = true;
+            Debug.Log("In Cooldown");
+        }
     }
 
     public void OnButtonClick()
     {
         //exit
-        if(StaticData.isHiding ==true)
+        if (InCoolDown != true)
         {
-            Player.SetActive(true);
-            HidingCanvas.SetActive(false);
-            MainUI.SetActive(true);
+            if (StaticData.isHiding == true || StaticData.isStatue == true)
+            {
+                StaticData.isHiding = false;
+                StaticData.isStatue = false;
+                Player.SetActive(true);
+                HidingCanvas.SetActive(false);
+                MainUI.SetActive(true);
+                InCoolDown = true;
+            }
+            if (Check.Clicked == true)
+            {
+                Check.Clicked = false;
+                timer = timeWanted;
+                InCoolDown = true;
+            }
         }
+
     }
 }
