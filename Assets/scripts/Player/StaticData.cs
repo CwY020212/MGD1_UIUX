@@ -45,4 +45,9 @@ public class StaticData : MonoBehaviour
     public static bool isHiding;
     public static bool isStatue;
 
+    public static bool TimerInWork;
+    public static float timer = 10.0f;
+    public static bool TelevisionInWork = false;
+    public static bool RadioInWork = false;
+
 }
