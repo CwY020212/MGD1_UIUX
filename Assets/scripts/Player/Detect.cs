@@ -9,6 +9,7 @@ public class Detect : MonoBehaviour
     public bool[] NotesInRange;
     private const string Notes = "Note";
     private string Changes;
+    [SerializeField] private GameObject glowing_effect;
 
     public void OnTriggerStay2D(Collider2D collision)
     {
@@ -19,6 +20,7 @@ public class Detect : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Items"))
         {
+            glowing_effect.SetActive(true);
             if (collision.gameObject.name == "HolyWater")
             {
                 ItemsInRange[0] = true;
@@ -69,6 +71,7 @@ public class Detect : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Ability"))
         {
+            glowing_effect.SetActive(true);
             if (collision.gameObject.name == "Television")
             {
                 AbilityInRange[0] = true;
@@ -93,9 +96,11 @@ public class Detect : MonoBehaviour
 
         for (int j = 1; j < 15; j++)
         {
+
             Changes = Notes + j;
             if (collision.gameObject.name == Changes)
             {
+                glowing_effect.SetActive(true);
                 NotesInRange[count] = true; 
                 Debug.Log(Changes+ " In Range");
                 count++;
@@ -105,12 +110,14 @@ public class Detect : MonoBehaviour
 
         if (collision.gameObject.CompareTag("HidingSpot"))
         {
+            glowing_effect.SetActive(true);
             StaticData.isHiding = true;
             Debug.Log("Hiding in Range");
         }
 
         if(collision.gameObject.CompareTag("StatueSpot"))
         {
+            glowing_effect.SetActive(true);
             StaticData.isStatue = true;
             Debug.Log("Statue in Range");
         }
@@ -121,6 +128,7 @@ public class Detect : MonoBehaviour
         int count = 0;
         if(collision.gameObject.CompareTag("Items"))
         {
+            glowing_effect.SetActive(false);
             for (int i = 0; i < 9; i++)
             {
                 ItemsInRange[i] = false;
@@ -129,6 +137,7 @@ public class Detect : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Ability"))
         {
+            glowing_effect.SetActive(false);
             for (int i = 0; i < 4; i++)
             {
                 AbilityInRange[i] = false;
@@ -141,11 +150,22 @@ public class Detect : MonoBehaviour
             Changes = Notes + j;
             if (collision.gameObject.name == Changes)
             {
+                glowing_effect.SetActive(false);
                 NotesInRange[count] = false;
                 Debug.Log(Changes + " Out of Range");
                 count++;
             }
             Changes = Notes;
+        }
+        if (collision.gameObject.CompareTag("HidingSpot"))
+        {
+            glowing_effect.SetActive(false);
+            Debug.Log("HidingSpot Out Of Range");
+        }
+        if (collision.gameObject.CompareTag("StatueSpot"))
+        {
+            glowing_effect.SetActive(false);
+            Debug.Log("StatueSpot Out Of Range");
         }
     }
 
