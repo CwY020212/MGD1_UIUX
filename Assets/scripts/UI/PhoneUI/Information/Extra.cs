@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class HowToMove : MonoBehaviour
+public class Extra : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI Webpage;
     [SerializeField] private GameObject Panel1;
@@ -21,12 +21,12 @@ public class HowToMove : MonoBehaviour
         
     }
 
-    public void HowToMovePage()
+    public void ExtraPage()
     {
-        Panel1.SetActive(true);
+        Panel1.SetActive(false);
         Panel2.SetActive(false);
-        Panel3.SetActive(false);
-        Webpage.text = " Page 1 Waiting to be filled.";
+        Panel3.SetActive(true);
+        Webpage.text = " Page 3 Waiting to be filled.";
 
     }
 }
