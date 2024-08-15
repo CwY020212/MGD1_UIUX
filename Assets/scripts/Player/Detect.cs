@@ -101,7 +101,7 @@ public class Detect : MonoBehaviour
             if (collision.gameObject.name == Changes)
             {
                 glowing_effect.SetActive(true);
-                NotesInRange[count] = true; 
+                NotesInRange[count] = true;
                 Debug.Log(Changes+ " In Range");
                 count++;
             }
