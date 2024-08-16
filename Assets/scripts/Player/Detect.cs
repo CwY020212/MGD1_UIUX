@@ -103,9 +103,10 @@ public class Detect : MonoBehaviour
                 glowing_effect.SetActive(true);
                 NotesInRange[count] = true;
                 Debug.Log(Changes+ " In Range");
-                count++;
+                
             }
             Changes = Notes;
+            count++;
         }
 
         if (collision.gameObject.CompareTag("HidingSpot"))

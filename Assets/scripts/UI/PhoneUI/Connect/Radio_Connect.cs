@@ -38,14 +38,14 @@ public class Radio_Connect : MonoBehaviour
             StaticData.RadioInWork = false;
             StaticData.TimerInWork = false;
             timerText.text = "No Alarm";
-            StaticData.timer = 10.0f;
+            StaticData.timer = StaticData.minutes + StaticData.seconds;
         }
     }
     public void RadioControl()
     {
         if (StaticData.TimerInWork != true)
         {
-            StaticData.timer = 10.0f;
+            StaticData.timer = StaticData.minutes + StaticData.seconds;
             StaticData.TimerInWork = true;
             StaticData.RadioInWork = true;
         }

@@ -6,7 +6,7 @@ using Terresquall;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    private float movespeed = 400.0f;
+    public float movespeed = 400.0f;
     private float hor;
     private float Ver;
     public bool isPaused = false;

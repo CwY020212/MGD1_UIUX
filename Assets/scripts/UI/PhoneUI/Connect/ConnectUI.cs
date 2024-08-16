@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,10 +23,14 @@ public class ConnectUI : MonoBehaviour
     
     public void OnButtonClick()
     {
-        if (movement.isPaused == true)
+        if (StaticData.BatteryLife >= 0)
         {
-            Connect_UI.SetActive(true);
-            Phone_UI.SetActive(false);
+            if (movement.isPaused == true)
+            {
+                Connect_UI.SetActive(true);
+                Phone_UI.SetActive(false);
+                StaticData.BatteryLife -= StaticData.BatterPerUse;
+            }
         }
     }
 }

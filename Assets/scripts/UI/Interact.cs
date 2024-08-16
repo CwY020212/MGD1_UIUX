@@ -24,7 +24,6 @@ public class Interact : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Cooldown_Time);
         if (Check.InCoolDown == true)
         {
             Cooldown_Time -= Time.deltaTime;
