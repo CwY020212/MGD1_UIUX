@@ -8,7 +8,7 @@ public class Exit : MonoBehaviour
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject HidingCanvas;
     [SerializeField] private GameObject MainUI;
-    private const float timeWanted = 10.0f; // 
+    private const float timeWanted = 30.0f; // Hiding Time
     private float timer = timeWanted;
     public Interact Check;
     public bool InCoolDown = false;

@@ -58,4 +58,6 @@ public class StaticData : MonoBehaviour
 
     public static bool Difficulty = false;
 
+    public static bool isPaused= false;
+
 }

@@ -9,6 +9,10 @@ TagManager:
   - Notes
   - HidingSpot
   - StatueSpot
+  - Middle
+  - Bottom
+  - Top
+  - Hidden
   layers:
   - Default
   - TransparentFX

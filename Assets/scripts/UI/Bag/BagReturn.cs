@@ -30,6 +30,7 @@ public class BagReturn : MonoBehaviour
         if (movement.isPaused == false)
         {
             Inventory_UI.SetActive(false);
+            if(movement.isActiveAndEnabled == true)
             MainInGame_UI.SetActive(true);
         }
     }

@@ -18,26 +18,29 @@ public class Television_Connect : MonoBehaviour
 
     private void Update()
     {
-        if (StaticData.TimerInWork == true && StaticData.TelevisionInWork != true )
+        if (StaticData.isPaused == false)
         {
-            Radio_Button.SetActive(false);
-            Television_Button.SetActive(false);
-            //timer
-            StaticData.timer -= Time.deltaTime;
-            minutes = Mathf.FloorToInt(StaticData.timer / 60);
-            seconds = Mathf.FloorToInt(StaticData.timer % 60);
-            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        }
+            if (StaticData.TimerInWork == true && StaticData.TelevisionInWork != true)
+            {
+                Radio_Button.SetActive(false);
+                Television_Button.SetActive(false);
+                //timer
+                StaticData.timer -= Time.deltaTime;
+                minutes = Mathf.FloorToInt(StaticData.timer / 60);
+                seconds = Mathf.FloorToInt(StaticData.timer % 60);
+                timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            }
 
-        if (StaticData.timer <= 0.0f) //after timer has finish counting && reset
-        {
-            Radio_Button.SetActive(true);
-            Television_Button.SetActive(true);
-            StaticData.TelevisionInWork = false;
-            StaticData.RadioInWork = false;
-            StaticData.TimerInWork = false;
-            timerText.text = "No Alarm";
-            StaticData.timer = StaticData.minutes + StaticData.seconds;
+            if (StaticData.timer <= 0.0f) //after timer has finish counting && reset
+            {
+                Radio_Button.SetActive(true);
+                Television_Button.SetActive(true);
+                StaticData.TelevisionInWork = false;
+                StaticData.RadioInWork = false;
+                StaticData.TimerInWork = false;
+                timerText.text = "No Alarm";
+                StaticData.timer = StaticData.minutes + StaticData.seconds;
+            }
         }
     }
     public void TelevisionControl()

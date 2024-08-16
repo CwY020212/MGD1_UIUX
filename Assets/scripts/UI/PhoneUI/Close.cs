@@ -31,6 +31,7 @@ public class Close : MonoBehaviour
         if (movement.isPaused == false)
         {
             Phone_UI.SetActive(false);
+            if(movement.isActiveAndEnabled == true)
             MainInGame_UI.SetActive(true);
         }
     }
