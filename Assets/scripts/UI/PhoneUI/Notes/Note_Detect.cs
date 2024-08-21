@@ -29,8 +29,6 @@ public class Note_Detect : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(StaticData.Note13);
-
         if (StaticData.Note1 == true)
             Button1.SetActive(true);
 

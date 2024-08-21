@@ -27,11 +27,11 @@ public class Interact : MonoBehaviour
         if (Check.InCoolDown == true)
         {
             Cooldown_Time -= Time.deltaTime;
-            if(Cooldown_Time<=0.0f)
+            if (Cooldown_Time <= 0.0f)
             {
                 Check.InCoolDown = false;
                 Cooldown_Time = Cooldown_Period;
-                Debug.Log("coolDown finish");
+                StaticData.LineToBeShown = "CoolDown Finish";
             }
         }
     }
@@ -45,7 +45,7 @@ public class Interact : MonoBehaviour
                 if (Detection.ItemsInRange[0] == true)
                 {
                     StaticData.HolyWater = true;
-                    Debug.Log("HolyWater Gotcha");
+                    StaticData.LineToBeShown = "HolyWater Gotcha";
                 }
             }
 
@@ -154,6 +154,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note4 = true;
                     Debug.Log("Note4 Gotcha");
+                    StaticData.LineToBeShown = "Note4 x 1 ";
                 }
             }
             if (StaticData.Note5 == false)
@@ -162,6 +163,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note5 = true;
                     Debug.Log("Note5 Gotcha");
+                    StaticData.LineToBeShown = "Note5 x 1 ";
                 }
             }
             if (StaticData.Note6 == false)

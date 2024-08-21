@@ -66,37 +66,65 @@ public class Movement : MonoBehaviour
             Middle_FrontSide.SetActive(true);
             Middle_BackSide.SetActive(true);
             Bottom_BackSide.SetActive(false);
+            Bottom_FrontSide.SetActive(false);
+            Top_BackSide.SetActive(false);
             Top_FrontSide.SetActive(false);
+            Hidden_BackSide.SetActive(false);
+            Hidden_FrontSide.SetActive(false);
             this.gameObject.GetComponent<SortingGroup>().sortingOrder = 0;
             Middle_Cover.SetActive(false);
             Bottom_Cover.SetActive(true);
-            Top_Cover.SetActive(true);
+            Top_Cover.SetActive(false);
+            Hidden_Cover.SetActive(true);
         }
         if (collision.gameObject.CompareTag("Bottom"))
         {
+            Middle_FrontSide.SetActive(false);
+            Middle_BackSide.SetActive(false);
             Bottom_BackSide.SetActive(true);
+            Bottom_FrontSide.SetActive(true);
+            Top_BackSide.SetActive(false);
+            Top_FrontSide.SetActive(false);
+            Hidden_BackSide.SetActive(false);
+            Hidden_FrontSide.SetActive(false);
             this.gameObject.GetComponent<SortingGroup>().sortingOrder = 3;
-            Middle_Cover.SetActive(true);
+            Middle_Cover.SetActive(false);
             Bottom_Cover.SetActive(false);
+            Top_Cover.SetActive(true);
+            Hidden_Cover.SetActive(true);
         }
         if (collision.gameObject.CompareTag("Top"))
         {
+            Middle_FrontSide.SetActive(false);
+            Middle_BackSide.SetActive(false);
+            Bottom_BackSide.SetActive(false);
+            Bottom_FrontSide.SetActive(false);
             Top_BackSide.SetActive(true);
             Top_FrontSide.SetActive(true);
-            Middle_BackSide.SetActive(false);
+            Hidden_BackSide.SetActive(false);
+            Hidden_FrontSide.SetActive(false);
             this.gameObject.GetComponent<SortingGroup>().sortingOrder = -3;
             Top_Cover.SetActive(false);
             Middle_Cover.SetActive(true);
-            Hidden_Cover.SetActive(true);
+            Bottom_Cover.SetActive(true);
+            Hidden_Cover.SetActive(false);
             Cupboard.SetActive(true);
         }
         if (collision.gameObject.CompareTag("Hidden"))
         {
+            Middle_FrontSide.SetActive(false);
+            Middle_BackSide.SetActive(false);
+            Bottom_BackSide.SetActive(false);
+            Bottom_FrontSide.SetActive(false);
             Top_BackSide.SetActive(false);
+            Top_FrontSide.SetActive(false);
             Hidden_BackSide.SetActive(true);
+            Hidden_FrontSide.SetActive(true);
             this.gameObject.GetComponent<SortingGroup>().sortingOrder = -5;
-            Hidden_Cover.SetActive(false);
             Top_Cover.SetActive(true);
+            Middle_Cover.SetActive(true);
+            Bottom_Cover.SetActive(true);
+            Hidden_Cover.SetActive(false);
             Cupboard.SetActive(false);
         }
     }
