@@ -38,8 +38,11 @@ public class Television_Connect : MonoBehaviour
                 StaticData.TelevisionInWork = false;
                 StaticData.RadioInWork = false;
                 StaticData.TimerInWork = false;
+                StaticData.TelevisionInRing = true;
+                StartCoroutine(Wait());
                 timerText.text = "No Alarm";
                 StaticData.timer = StaticData.minutes + StaticData.seconds;
+                StaticData.LineToBeShown = "The Ghost is distracted!";
             }
         }
     }
@@ -51,6 +54,13 @@ public class Television_Connect : MonoBehaviour
             StaticData.TimerInWork = true;
             StaticData.TelevisionInWork = true;
         }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(15.0f);
+        StaticData.TelevisionInRing = false;
+        StaticData.LineToBeShown = "The Ghost started to move again!";
     }
 
 }

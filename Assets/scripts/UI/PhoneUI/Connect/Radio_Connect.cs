@@ -39,8 +39,11 @@ public class Radio_Connect : MonoBehaviour
                 StaticData.TelevisionInWork = false;
                 StaticData.RadioInWork = false;
                 StaticData.TimerInWork = false;
+                StaticData.RadioInRing = true;
+                StartCoroutine(Wait());
                 timerText.text = "No Alarm";
                 StaticData.timer = StaticData.minutes + StaticData.seconds;
+                StaticData.LineToBeShown = "The Ghost is distracted!";
             }
         }
     }
@@ -52,5 +55,12 @@ public class Radio_Connect : MonoBehaviour
             StaticData.TimerInWork = true;
             StaticData.RadioInWork = true;
         }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(15.0f);
+        StaticData.RadioInRing = false;
+        StaticData.LineToBeShown = "The Ghost started to move again!";
     }
 }

@@ -12,13 +12,9 @@ public class UpdatesPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Line2;
     [SerializeField] private TextMeshProUGUI Line3;
 
-    private const float timeWanted = 7.0f;
     private bool Curr1 = false;
     private bool Curr2 = false;
     private bool Curr3 = false;
-    private float time1 = timeWanted;
-    private float time2 = timeWanted;
-    private float time3 = timeWanted;
 
     // Start is called before the first frame update
     void Start()
@@ -31,34 +27,78 @@ public class UpdatesPanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(time1);
-        Debug.Log(StaticData.LineToBeShown);
+        if (StaticData.LineToBeShown != null)
+        {
+            //to change the content of line1
+            if (Curr1 == false)
+                CallLine(Updates1, Line1);
+
+
+            //time to show line1
+            if (Updates1.activeInHierarchy)
+                StartCoroutine(Wait());
+        }
+
+        if(StaticData.LineToBeShown != null)
+        {
+            //to check if line1 is in progress, and if there is new updates in staticdata
+            if (Curr1 == true && Line1.text != StaticData.LineToBeShown)
+                CallLine(Updates2, Line2);
+
+            //time to show line 2
+            if (Updates2.activeInHierarchy)
+                StartCoroutine(WaitInLine());
+        }
 
         if (StaticData.LineToBeShown != null)
         {
-            Updates1.SetActive(true);
+            //to check if line2 is in progress, and if there is new updates in staticdata
+            if (Line2.text != StaticData.LineToBeShown)
+                CallLine(Updates3, Line3);
+
+            //time to show line 3
+            if (Updates3.activeInHierarchy)
+                StartCoroutine(WaitInLast());
+
         }
-        if (Updates1.activeInHierarchy)
-        {
-            //to check if there is sentence in line1, if not then change the content of line1
-            if(Curr1 == false)
-                Line1.text = StaticData.LineToBeShown;
+    }
 
-            //timer to show line1
-            time1 -= Time.deltaTime;
+    IEnumerator Wait()
+    {
+        Curr1 = true;
+        yield return new WaitForSeconds(7.0f);
+        EndLine(Updates1, Line1, Curr1);
+    }
 
-            //line 1 is in progress
-            Curr1 = true;
+    IEnumerator WaitInLine()
+    {
+        Curr2 = true;
+        yield return new WaitForSeconds(7.0f);
+        if (Curr1 == false)
+            yield return new WaitForSeconds(3.0f);
+        EndLine(Updates2, Line2, Curr2);
+    }
 
-            if (time1 <= 0)
-            {
-                Updates1.SetActive(false);
-                time1 = timeWanted;
-                Curr1 = false;
-                StaticData.LineToBeShown = null;
-            }
-        }
+    IEnumerator WaitInLast()
+    {
+        Curr3 = true;
+        yield return new WaitForSeconds(7.0f);
+        if (Curr2 == false)
+            yield return new WaitForSeconds(5.0f);
+        EndLine(Updates3, Line3,Curr3);
+    }
 
+    void CallLine(GameObject GB, TextMeshProUGUI Line)
+    {
+        GB.SetActive(true);
+        Line.text = StaticData.LineToBeShown;
+    }
 
+    void EndLine(GameObject GB, TextMeshProUGUI Line, bool Curr)
+    {
+        StaticData.LineToBeShown = null;
+        GB.SetActive(false);
+        Line.text = null;
+        Curr = false;
     }
 }

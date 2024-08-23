@@ -24,47 +24,38 @@ public class Detect : MonoBehaviour
             if (collision.gameObject.name == "HolyWater")
             {
                 ItemsInRange[0] = true;
-                Debug.Log("HolyWater In Range");
             }
             if (collision.gameObject.name == "Crucifix")
             {
                 ItemsInRange[1] = true;
-                Debug.Log("Crucifix In Range");
             }
             if (collision.gameObject.name == "Salt")
             {
                 ItemsInRange[2] = true;
-                Debug.Log("Salt In Range");
             }
             if (collision.gameObject.name == "Pepper")
             {
                 ItemsInRange[3] = true;
-                Debug.Log("Pepper In Range");
             }
             if (collision.gameObject.name == "Hammer")
             {
                 ItemsInRange[4] = true;
-                Debug.Log("Hammer In Range");
             }
             if (collision.gameObject.name == "Key1")
             {
                 ItemsInRange[5] = true;
-                Debug.Log("Key1 In Range");
             }
             if (collision.gameObject.name == "Key2")
             {
                 ItemsInRange[6] = true;
-                Debug.Log("Key2 In Range");
             }
             if (collision.gameObject.name == "Key3")
             {
                 ItemsInRange[7] = true;
-                Debug.Log("Key3 In Range");
             }
             if (collision.gameObject.name == "Key4")
             {
                 ItemsInRange[8] = true;
-                Debug.Log("Key4 In Range");
             }
 
         }
@@ -75,22 +66,18 @@ public class Detect : MonoBehaviour
             if (collision.gameObject.name == "Television")
             {
                 AbilityInRange[0] = true;
-                Debug.Log("Television In Range");
             }
             if (collision.gameObject.name == "Radio")
             {
                 AbilityInRange[1] = true;
-                Debug.Log("Radio In Range");
             }
             if (collision.gameObject.name == "Cloak")
             {
                 AbilityInRange[2] = true;
-                Debug.Log("Cloak In Range");
             }
             if (collision.gameObject.name == "Mimicking")
             {
                 AbilityInRange[3] = true;
-                Debug.Log("Mimicking In Range");
             }
         }
 
@@ -102,7 +89,6 @@ public class Detect : MonoBehaviour
             {
                 glowing_effect.SetActive(true);
                 NotesInRange[count] = true;
-                Debug.Log(Changes+ " In Range");
                 
             }
             Changes = Notes;
@@ -113,14 +99,12 @@ public class Detect : MonoBehaviour
         {
             glowing_effect.SetActive(true);
             StaticData.isHiding = true;
-            Debug.Log("Hiding in Range");
         }
 
         if(collision.gameObject.CompareTag("StatueSpot"))
         {
             glowing_effect.SetActive(true);
             StaticData.isStatue = true;
-            Debug.Log("Statue in Range");
         }
     }
 
@@ -134,7 +118,6 @@ public class Detect : MonoBehaviour
             {
                 ItemsInRange[i] = false;
             }
-            Debug.Log("Items Out Of Range");
         }
         if (collision.gameObject.CompareTag("Ability"))
         {
@@ -143,7 +126,6 @@ public class Detect : MonoBehaviour
             {
                 AbilityInRange[i] = false;
             }
-            Debug.Log("Ability Out Of Range");
         }
 
         for (int j = 1; j < 15; j++)
@@ -153,7 +135,6 @@ public class Detect : MonoBehaviour
             {
                 glowing_effect.SetActive(false);
                 NotesInRange[count] = false;
-                Debug.Log(Changes + " Out of Range");
                 count++;
             }
             Changes = Notes;
@@ -161,12 +142,10 @@ public class Detect : MonoBehaviour
         if (collision.gameObject.CompareTag("HidingSpot"))
         {
             glowing_effect.SetActive(false);
-            Debug.Log("HidingSpot Out Of Range");
         }
         if (collision.gameObject.CompareTag("StatueSpot"))
         {
             glowing_effect.SetActive(false);
-            Debug.Log("StatueSpot Out Of Range");
         }
     }
 
