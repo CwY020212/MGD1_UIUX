@@ -30,35 +30,35 @@ public class UpdatesPanel : MonoBehaviour
         if (StaticData.LineToBeShown != null)
         {
             //to change the content of line1
-            if (Curr1 == false)
-                CallLine(Updates1, Line1);
-
-
-            //time to show line1
-            if (Updates1.activeInHierarchy)
+            if (!Updates1.activeInHierarchy)
+            {
+                Updates1.SetActive(true);
+                if(!Curr3)
+                    Line1.text = StaticData.LineToBeShown;
                 StartCoroutine(Wait());
-        }
+            }
 
-        if(StaticData.LineToBeShown != null)
-        {
+
+
             //to check if line1 is in progress, and if there is new updates in staticdata
-            if (Curr1 == true && Line1.text != StaticData.LineToBeShown)
-                CallLine(Updates2, Line2);
+            if (!Updates2.activeInHierarchy)
+                if (Curr1 == true && Line1.text != StaticData.LineToBeShown)
+                {
+                    Updates2.SetActive(true);
+                    Line2.text = StaticData.LineToBeShown;
+                    StartCoroutine(WaitInLine());
+                }
 
-            //time to show line 2
-            if (Updates2.activeInHierarchy)
-                StartCoroutine(WaitInLine());
-        }
 
-        if (StaticData.LineToBeShown != null)
-        {
+
             //to check if line2 is in progress, and if there is new updates in staticdata
-            if (Line2.text != StaticData.LineToBeShown)
-                CallLine(Updates3, Line3);
+            Line3.text = StaticData.LineToBeShown;
 
-            //time to show line 3
-            if (Updates3.activeInHierarchy)
+            if (Line1.text != StaticData.LineToBeShown && Line2.text != StaticData.LineToBeShown)
+            {
+                Updates3.SetActive(true);
                 StartCoroutine(WaitInLast());
+            }
 
         }
     }
@@ -86,12 +86,6 @@ public class UpdatesPanel : MonoBehaviour
         if (Curr2 == false)
             yield return new WaitForSeconds(5.0f);
         EndLine(Updates3, Line3,Curr3);
-    }
-
-    void CallLine(GameObject GB, TextMeshProUGUI Line)
-    {
-        GB.SetActive(true);
-        Line.text = StaticData.LineToBeShown;
     }
 
     void EndLine(GameObject GB, TextMeshProUGUI Line, bool Curr)

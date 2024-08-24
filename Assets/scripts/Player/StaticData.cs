@@ -62,7 +62,6 @@ public class StaticData : MonoBehaviour
 
     public static bool isPaused= false;
 
-    public static float TimeStarted;
     public static string LineToBeShown;
 
 }
