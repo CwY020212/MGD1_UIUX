@@ -31,5 +31,6 @@ public class Cancel_Connect : MonoBehaviour
         StaticData.RadioInWork = false;
         StaticData.TimerInWork = false;
         timerText.text = "No Alarm";
+        StaticData.LineToBeShown = "Alarm is canceled";
     }
 }

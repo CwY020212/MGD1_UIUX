@@ -83,7 +83,7 @@ public class GhostMovement : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        for(int i = 0; i<5; i++)
+        for(int i = 0; i < 5; i++)
             Gizmos.DrawWireSphere(patrolPoints[i].position, 0.5f);
         for (int j = 0; j < 2; j++)
             Gizmos.DrawWireSphere(PrioritizedPoints[j].position, 0.5f);

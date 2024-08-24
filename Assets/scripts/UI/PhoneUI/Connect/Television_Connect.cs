@@ -18,41 +18,66 @@ public class Television_Connect : MonoBehaviour
 
     private void Update()
     {
-        if (StaticData.isPaused == false)
+        if (StaticData.TV && StaticData.Radio)
         {
-            if (StaticData.TimerInWork == true && StaticData.TelevisionInWork != true)
+            if (StaticData.isPaused == false)
             {
-                Radio_Button.SetActive(false);
-                Television_Button.SetActive(false);
-                //timer
-                StaticData.timer -= Time.deltaTime;
-                minutes = Mathf.FloorToInt(StaticData.timer / 60);
-                seconds = Mathf.FloorToInt(StaticData.timer % 60);
-                timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-            }
+                if (StaticData.TimerInWork == true && StaticData.TelevisionInWork != true)
+                {
+                    Radio_Button.SetActive(false);
+                    Television_Button.SetActive(false);
+                    //timer
+                    StaticData.timer -= Time.deltaTime;
+                    minutes = Mathf.FloorToInt(StaticData.timer / 60);
+                    seconds = Mathf.FloorToInt(StaticData.timer % 60);
+                    timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+                }
 
-            if (StaticData.timer <= 0.0f) //after timer has finish counting && reset
-            {
-                Radio_Button.SetActive(true);
-                Television_Button.SetActive(true);
-                StaticData.TelevisionInWork = false;
-                StaticData.RadioInWork = false;
-                StaticData.TimerInWork = false;
-                StaticData.TelevisionInRing = true;
-                StartCoroutine(Wait());
-                timerText.text = "No Alarm";
-                StaticData.timer = StaticData.minutes + StaticData.seconds;
-                StaticData.LineToBeShown = "The Ghost is distracted!";
+                if (StaticData.timer <= 0.0f) //after timer has finish counting && reset
+                {
+                    Radio_Button.SetActive(true);
+                    Television_Button.SetActive(true);
+                    StaticData.TelevisionInWork = false;
+                    StaticData.RadioInWork = false;
+                    StaticData.TimerInWork = false;
+                    StaticData.TelevisionInRing = true;
+                    StartCoroutine(Wait());
+                    timerText.text = "No Alarm";
+                    StaticData.timer = StaticData.minutes + StaticData.seconds;
+                    StaticData.LineToBeShown = "The Ghost is distracted!";
+                }
             }
         }
     }
     public void TelevisionControl()
     {
-        if (StaticData.TimerInWork != true)
+        if (StaticData.TV && StaticData.Radio)
         {
-            StaticData.timer = StaticData.minutes + StaticData.seconds;
-            StaticData.TimerInWork = true;
-            StaticData.TelevisionInWork = true;
+            if (StaticData.TimerInWork != true)
+            {
+                StaticData.timer = StaticData.minutes + StaticData.seconds;
+                StaticData.TimerInWork = true;
+                StaticData.TelevisionInWork = true;
+                StaticData.LineToBeShown = " TV alarm is now set";
+            }
+        }
+        else
+        {
+            StaticData.LineToBeShown = "Haven't connected to TV";
+        }
+        if (StaticData.TV)
+        {
+            if (!StaticData.Radio)
+            {
+                StaticData.LineToBeShown = "Radio is not yet connected";
+            }
+        }
+        if (StaticData.Radio)
+        {
+            if (!StaticData.TV)
+            {
+                StaticData.LineToBeShown = "TV is not yet connected";
+            }
         }
     }
 

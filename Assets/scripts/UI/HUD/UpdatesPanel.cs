@@ -33,8 +33,7 @@ public class UpdatesPanel : MonoBehaviour
             if (!Updates1.activeInHierarchy)
             {
                 Updates1.SetActive(true);
-                if(!Curr3)
-                    Line1.text = StaticData.LineToBeShown;
+                Line1.text = StaticData.LineToBeShown;
                 StartCoroutine(Wait());
             }
 
@@ -46,18 +45,19 @@ public class UpdatesPanel : MonoBehaviour
                 {
                     Updates2.SetActive(true);
                     Line2.text = StaticData.LineToBeShown;
+
                     StartCoroutine(WaitInLine());
                 }
 
 
 
             //to check if line2 is in progress, and if there is new updates in staticdata
-            Line3.text = StaticData.LineToBeShown;
-
             if (Line1.text != StaticData.LineToBeShown && Line2.text != StaticData.LineToBeShown)
             {
                 Updates3.SetActive(true);
+                Line3.text = StaticData.LineToBeShown;
                 StartCoroutine(WaitInLast());
+
             }
 
         }
