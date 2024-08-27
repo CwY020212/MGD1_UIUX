@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class GhostMovement : MonoBehaviour
 {
-    private float speed = 2.0f;
+    public float speed = 2.0f;
     public Transform[] patrolPoints;
     public Transform[] PrioritizedPoints;
-    private float waitTime = 2.0f;
+    public float waitTime = 2.0f;
     private float newWaitTime = 10.0f;
     private int currentPointIndex = 0;
     private int PrioritizedPointIndex = 0;
     private bool once = false;
 
+    public HolyWater holyWater;
     private void Update()
     {
         //to check which point should the ghost go to
@@ -31,7 +32,8 @@ public class GhostMovement : MonoBehaviour
         {
             if (transform.position != patrolPoints[currentPointIndex].position)
             {
-                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPointIndex].position, speed * Time.deltaTime);
+                if (!holyWater.Stunned)
+                    transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPointIndex].position, speed * Time.deltaTime);
             }
             else
             {
@@ -46,7 +48,8 @@ public class GhostMovement : MonoBehaviour
         {
             if (transform.position != PrioritizedPoints[PrioritizedPointIndex].position)
             {
-                transform.position = Vector2.MoveTowards(transform.position, PrioritizedPoints[PrioritizedPointIndex].position, speed * Time.deltaTime);
+                if (!holyWater.Stunned)
+                    transform.position = Vector2.MoveTowards(transform.position, PrioritizedPoints[PrioritizedPointIndex].position, speed * Time.deltaTime);
             }
             else
             {

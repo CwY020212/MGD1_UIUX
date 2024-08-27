@@ -9,13 +9,19 @@ public class Interact : MonoBehaviour
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject HidingCanvas;
     [SerializeField] private GameObject MainUI;
+    [SerializeField] private GameObject SubInteractButton;
     public GameObject[] Items;
-    public GameObject[] Notes; 
+    public GameObject[] Notes;  
+    public GameObject[] Doorlock;
+    public bool[] DoorLockInRange;
     public bool Clicked = false;
     private const float Cooldown_Period = 10.0f;
     public float Cooldown_Time = Cooldown_Period;
     public Exit Check;
 
+
+
+   
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +41,11 @@ public class Interact : MonoBehaviour
                 Cooldown_Time = Cooldown_Period;
                 StaticData.LineToBeShown = "CoolDown Finish";
             }
+        }
+
+        if(StaticData.GameStage ==2)
+        {
+            SubInteractButton.SetActive(true);
         }
     }
 
@@ -96,7 +107,7 @@ public class Interact : MonoBehaviour
             {
                 if (Detection.ItemsInRange[5] == true)
                 {
-                    StaticData.Hammer = true;
+                    StaticData.Key1 = true;
                     StaticData.LineToBeShown = "Key1 x 1";
                     Destroy(Items[5]);
                 }
@@ -104,9 +115,9 @@ public class Interact : MonoBehaviour
 
             if (StaticData.Key2 == false)
             {
-                if (Detection.ItemsInRange[4] == true)
+                if (Detection.ItemsInRange[6] == true)
                 {
-                    StaticData.Hammer = true;
+                    StaticData.Key2 = true;
                     StaticData.LineToBeShown = "Key2 x 1";
                     Destroy(Items[6]);
                 }
@@ -114,9 +125,9 @@ public class Interact : MonoBehaviour
 
             if (StaticData.Key3 == false)
             {
-                if (Detection.ItemsInRange[4] == true)
+                if (Detection.ItemsInRange[7] == true)
                 {
-                    StaticData.Hammer = true;
+                    StaticData.Key3 = true;
                     StaticData.LineToBeShown = "Key3 x 1";
                     Destroy(Items[7]);
                 }
@@ -124,11 +135,21 @@ public class Interact : MonoBehaviour
 
             if (StaticData.Key4 == false)
             {
-                if (Detection.ItemsInRange[4] == true)
+                if (Detection.ItemsInRange[8] == true)
                 {
-                    StaticData.Hammer = true;
+                    StaticData.Key4 = true;
                     StaticData.LineToBeShown = "Key4 x 1";
                     Destroy(Items[8]);
+                }
+            }
+
+            if (StaticData.HiddenKey == false)
+            {
+                if (Detection.ItemsInRange[9] == true)
+                {
+                    StaticData.HiddenKey = true;
+                    StaticData.LineToBeShown = "Hidden Key x 1";
+                    Destroy(Items[9]);
                 }
             }
         }
@@ -312,5 +333,75 @@ public class Interact : MonoBehaviour
                 StaticData.LineToBeShown = "You are now Hiding";
             }
         }
+
+        //Door Lock
+        if (DoorLockInRange[0])
+        {
+            if (StaticData.Key1)
+            {
+                Destroy(Doorlock[0]);
+                StaticData.LineToBeShown = "Door is unlocked now";
+            }
+            else
+            {
+                StaticData.LineToBeShown = "Door is locked";
+            }
+        }
+
+        if (DoorLockInRange[1])
+        {
+
+            if (StaticData.Key2)
+            {
+                Destroy(Doorlock[1]);
+                StaticData.LineToBeShown = "Door is unlocked now";
+            }
+            else
+            {
+                StaticData.LineToBeShown = "Door is locked";
+            }
+        }
+
+        if (DoorLockInRange[2])
+        {
+            if (StaticData.Key3)
+            {
+                Destroy(Doorlock[2]);
+                StaticData.LineToBeShown = "Door is unlocked now";
+            }
+            else
+            {
+                StaticData.LineToBeShown = "Door is locked";
+            }
+        }
+
+        if (DoorLockInRange[3])
+        {
+            if (StaticData.Key4)
+            {
+                Destroy(Doorlock[3]);
+                StaticData.LineToBeShown = "Door is unlocked now";
+            }
+            else
+            {
+                StaticData.LineToBeShown = "Door is locked";
+            }
+        }
+
+        if (DoorLockInRange[4])
+        {
+            if (StaticData.HiddenKey)
+            {
+                Destroy(Doorlock[4]);
+                StaticData.LineToBeShown = "Door is unlocked now";
+            }
+            else
+            {
+                StaticData.LineToBeShown = "Door is locked";
+            }
+        }
+
+
     }
+    
 }

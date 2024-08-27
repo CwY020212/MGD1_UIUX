@@ -10,10 +10,11 @@ public class Detect : MonoBehaviour
     private const string Notes = "Note";
     private string Changes;
     [SerializeField] private GameObject glowing_effect;
+    public Interact interact;
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        ItemsInRange = new bool[9];
+        ItemsInRange = new bool[10];
         AbilityInRange = new bool[4];
         NotesInRange = new bool[14];
         int count = 0;
@@ -56,6 +57,10 @@ public class Detect : MonoBehaviour
             if (collision.gameObject.name == "Key4")
             {
                 ItemsInRange[8] = true;
+            }
+            if (collision.gameObject.name == "HiddenKey")
+            {
+                ItemsInRange[9] = true;
             }
 
         }
@@ -106,6 +111,22 @@ public class Detect : MonoBehaviour
             glowing_effect.SetActive(true);
             StaticData.isStatue = true;
         }
+
+        if(collision.gameObject.CompareTag("DoorLock"))
+        {
+            glowing_effect.SetActive(true);
+            if(collision.gameObject.name == "MasterRoom(Key1)")
+                interact.DoorLockInRange[0] = true;
+            if (collision.gameObject.name == "NormalRoom(Key2)")
+                interact.DoorLockInRange[1] = true;
+            if (collision.gameObject.name == "FmRoom(Key3)")
+                interact.DoorLockInRange[2] = true;
+            if (collision.gameObject.name == "StudyRoom(Key4)")
+                interact.DoorLockInRange[3] = true;
+            if (collision.gameObject.name == "HiddenCorridor(HiddenKey)")
+                interact.DoorLockInRange[4] = true;
+
+        }
     }
 
     public void OnTriggerExit2D(Collider2D collision)
@@ -146,6 +167,20 @@ public class Detect : MonoBehaviour
         if (collision.gameObject.CompareTag("StatueSpot"))
         {
             glowing_effect.SetActive(false);
+        }
+        if (collision.gameObject.CompareTag("DoorLock"))
+        {
+            glowing_effect.SetActive(false);
+            if (collision.gameObject.name == "MasterRoom(Key1)")
+                interact.DoorLockInRange[0] = false;
+            if (collision.gameObject.name == "NormalRoom(Key2)")
+                interact.DoorLockInRange[1] = false;
+            if (collision.gameObject.name == "FmRoom(Key3)")
+                interact.DoorLockInRange[2] = false;
+            if (collision.gameObject.name == "StudyRoom(Key4)")
+                interact.DoorLockInRange[3] = false;
+            if (collision.gameObject.name == "HiddenCorridor(HiddenKey)")
+                interact.DoorLockInRange[4] = false;
         }
     }
 

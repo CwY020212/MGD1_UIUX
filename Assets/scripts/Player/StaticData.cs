@@ -17,6 +17,7 @@ public class StaticData : MonoBehaviour
     public static bool Key2;
     public static bool Key3;
     public static bool Key4;
+    public static bool HiddenKey;
 
 
     //notes
@@ -63,5 +64,7 @@ public class StaticData : MonoBehaviour
     public static bool isPaused= false;
 
     public static string LineToBeShown;
+
+    public static int GameStage =1; //1 for First, 2 for End
 
 }

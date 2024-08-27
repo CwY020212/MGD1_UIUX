@@ -14,6 +14,7 @@ TagManager:
   - Top
   - Hidden
   - Ghost
+  - DoorLock
   layers:
   - Default
   - TransparentFX
