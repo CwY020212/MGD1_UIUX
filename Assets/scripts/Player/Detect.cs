@@ -127,6 +127,8 @@ public class Detect : MonoBehaviour
                 interact.DoorLockInRange[4] = true;
 
         }
+
+
     }
 
     public void OnTriggerExit2D(Collider2D collision)
@@ -182,6 +184,7 @@ public class Detect : MonoBehaviour
             if (collision.gameObject.name == "HiddenCorridor(HiddenKey)")
                 interact.DoorLockInRange[4] = false;
         }
+
     }
 
 }

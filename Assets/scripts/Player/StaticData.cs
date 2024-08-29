@@ -53,8 +53,13 @@ public class StaticData : MonoBehaviour
     public static float timer = minutes + seconds;
     public static bool TelevisionInWork = false;
     public static bool TelevisionInRing = false;
+    public static bool TelevisionInCD = false;
+    public static bool TelevisionConnectionInRange;
     public static bool RadioInWork = false;
     public static bool RadioInRing = false;
+    public static bool RadioInCD = false;
+    public static bool RadioConnectionInRange;
+
 
     public static int BatteryLife = 50;
     public static int BatterPerUse = 5;

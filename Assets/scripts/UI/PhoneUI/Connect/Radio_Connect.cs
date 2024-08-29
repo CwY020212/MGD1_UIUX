@@ -9,6 +9,7 @@ public class Radio_Connect : MonoBehaviour
     [SerializeField] private GameObject Television_Button;
     private int minutes;
     private int seconds;
+    private float cooldown_time = 30.0f;
 
     [SerializeField] private TextMeshProUGUI timerText;
 
@@ -19,6 +20,18 @@ public class Radio_Connect : MonoBehaviour
 
     private void Update()
     {
+
+        if (StaticData.RadioInCD)
+        {
+            cooldown_time -= Time.deltaTime;
+        }
+        if (cooldown_time <= 0)
+        {
+            StaticData.LineToBeShown = "Radio control finish cooldown";
+            StaticData.RadioInCD = false;
+            cooldown_time = 30.0f;
+        }
+
         if (StaticData.TV && StaticData.Radio)
         {
             if (StaticData.isPaused == false)
@@ -52,34 +65,48 @@ public class Radio_Connect : MonoBehaviour
     }
     public void RadioControl()
     {
-        if (StaticData.TV && StaticData.Radio)
+        if (!StaticData.RadioInCD)
         {
-            if (StaticData.TimerInWork != true)
+            if (StaticData.RadioConnectionInRange)
             {
-                StaticData.timer = StaticData.minutes + StaticData.seconds;
-                StaticData.TimerInWork = true;
-                StaticData.RadioInWork = true;
-                StaticData.LineToBeShown = "Radio alarm is set";
+                if (StaticData.TV && StaticData.Radio)
+                {
+                    if (StaticData.TimerInWork != true)
+                    {
+                        StaticData.timer = StaticData.minutes + StaticData.seconds;
+                        StaticData.TimerInWork = true;
+                        StaticData.RadioInWork = true;
+                        StaticData.LineToBeShown = "Radio alarm is set";
+                    }
+                }
+                else
+                {
+                    StaticData.LineToBeShown = "Haven't Connected to Radio";
+                }
+
+                if (StaticData.TV)
+                {
+                    if (!StaticData.Radio)
+                    {
+                        StaticData.LineToBeShown = "Radio is not yet connected";
+                    }
+                }
+                if (StaticData.Radio)
+                {
+                    if (!StaticData.TV)
+                    {
+                        StaticData.LineToBeShown = "TV is not yet connected";
+                    }
+                }
+            }
+            else
+            {
+                StaticData.LineToBeShown = "You are not in range now";
             }
         }
         else
         {
-            StaticData.LineToBeShown = "Haven't Connected to Radio";
-        }
-
-        if(StaticData.TV)
-        {
-            if(!StaticData.Radio)
-            {
-                StaticData.LineToBeShown = "Radio is not yet connected";
-            }
-        }
-        if (StaticData.Radio)
-        {
-            if (!StaticData.TV)
-            {
-                StaticData.LineToBeShown = "TV is not yet connected";
-            }
+            StaticData.LineToBeShown = "Radio control is in cooldown";
         }
     }
 
