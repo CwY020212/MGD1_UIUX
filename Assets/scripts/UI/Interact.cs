@@ -39,7 +39,7 @@ public class Interact : MonoBehaviour
             {
                 Check.InCoolDown = false;
                 Cooldown_Time = Cooldown_Period;
-                StaticData.LineToBeShown = "CoolDown Finish";
+                StaticData.LineToBeShown = "Hiding Cooldown Finish";
             }
         }
 

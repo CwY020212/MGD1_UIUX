@@ -17,6 +17,7 @@ TagManager:
   - DoorLock
   - Television
   - Radio
+  - Mimicking
   layers:
   - Default
   - TransparentFX

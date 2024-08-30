@@ -106,11 +106,6 @@ public class Detect : MonoBehaviour
             StaticData.isHiding = true;
         }
 
-        if(collision.gameObject.CompareTag("StatueSpot"))
-        {
-            glowing_effect.SetActive(true);
-            StaticData.isStatue = true;
-        }
 
         if(collision.gameObject.CompareTag("DoorLock"))
         {
@@ -165,10 +160,7 @@ public class Detect : MonoBehaviour
         if (collision.gameObject.CompareTag("HidingSpot"))
         {
             glowing_effect.SetActive(false);
-        }
-        if (collision.gameObject.CompareTag("StatueSpot"))
-        {
-            glowing_effect.SetActive(false);
+
         }
         if (collision.gameObject.CompareTag("DoorLock"))
         {

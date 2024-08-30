@@ -1,0 +1,305 @@
+fileFormatVersion: 2
+guid: a0cf87ef674fc84429fad4c310390872
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TV_Anim_2
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1550
+        width: 617
+        height: 913
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664ec3cd137ba9047b60f8a44d7a7cc6
+      internalID: 1544892032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TV_Anim_4
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 1545
+        width: 618
+        height: 911
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ab7ce6cc385604b9557a144670c15f
+      internalID: -466546719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TV_Anim_9
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 1549
+        width: 611
+        height: 911
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b24bb6aa472e4d40bfd7ff4a5f940b2
+      internalID: 974460288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TV_Anim_11
+      rect:
+        serializedVersion: 2
+        x: 2674
+        y: 1542
+        width: 611
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba00b070c3bd254e97459389d0ed0ef
+      internalID: 467302058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TV_Anim_0: 1487301867
+      TV_Anim_1: 1745478911
+      TV_Anim_10: 326911203
+      TV_Anim_11: 467302058
+      TV_Anim_12: -389114572
+      TV_Anim_13: 1374042443
+      TV_Anim_14: 198821607
+      TV_Anim_15: 546722413
+      TV_Anim_16: 493936674
+      TV_Anim_17: 1581981178
+      TV_Anim_18: -2072176938
+      TV_Anim_19: 1730055282
+      TV_Anim_2: 1544892032
+      TV_Anim_20: -317873160
+      TV_Anim_21: 481220201
+      TV_Anim_22: 1346228288
+      TV_Anim_23: 450757073
+      TV_Anim_24: -2112770844
+      TV_Anim_25: -718597446
+      TV_Anim_26: 655423859
+      TV_Anim_27: 2063230970
+      TV_Anim_28: 1914410410
+      TV_Anim_29: 1182936590
+      TV_Anim_3: 77799450
+      TV_Anim_30: 460203880
+      TV_Anim_31: -1332572568
+      TV_Anim_32: 1159313247
+      TV_Anim_33: -1714457063
+      TV_Anim_34: -1076794638
+      TV_Anim_35: 959945674
+      TV_Anim_36: -2001618206
+      TV_Anim_37: 1132282603
+      TV_Anim_38: 1380260054
+      TV_Anim_39: -1831004656
+      TV_Anim_4: -466546719
+      TV_Anim_40: -1930587618
+      TV_Anim_41: -1890418203
+      TV_Anim_42: 796028368
+      TV_Anim_43: 745028679
+      TV_Anim_44: 2033502965
+      TV_Anim_45: 1240376715
+      TV_Anim_46: -1205469136
+      TV_Anim_47: 27420808
+      TV_Anim_48: -1621287781
+      TV_Anim_49: -1265744451
+      TV_Anim_5: 1314609508
+      TV_Anim_50: -1694200842
+      TV_Anim_51: -1918247022
+      TV_Anim_52: 1563580654
+      TV_Anim_53: 1013118364
+      TV_Anim_54: -1496759750
+      TV_Anim_6: 199993127
+      TV_Anim_7: 286324037
+      TV_Anim_8: 354446658
+      TV_Anim_9: 974460288
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -37,7 +37,7 @@ public class Exit : MonoBehaviour
             MainUI.SetActive(true);
             timer = timeWanted;
             InCoolDown = true;
-            Debug.Log("In Cooldown");
+            StaticData.LineToBeShown = "Hiding In Cooldown";
         }
     }
 
@@ -54,9 +54,7 @@ public class Exit : MonoBehaviour
                 HidingCanvas.SetActive(false);
                 MainUI.SetActive(true);
                 InCoolDown = true;
-            }
-            if (Check.Clicked == true)
-            {
+                StaticData.LineToBeShown = "Hiding In Cooldown";
                 Check.Clicked = false;
                 timer = timeWanted;
                 InCoolDown = true;

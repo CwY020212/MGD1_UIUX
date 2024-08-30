@@ -20,14 +20,13 @@ public class WalkSpeedSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         walkspeed = (int)movement.movespeed / 10;
         WP.text = "" + walkspeed ;
     }
 
     public void GetSliderValue()
     {
-        movement.movespeed = slider.value * 1000f;
+        movement.movespeed = slider.value * 500f;
         
     }
 }
