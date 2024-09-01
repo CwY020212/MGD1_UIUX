@@ -23,6 +23,7 @@ public class HolyWater : MonoBehaviour
                 Stunned = false;
                 StaticData.HolyWater = false;
                 timer = 10.0f;
+                this.enabled = false;
             }
         }
     }

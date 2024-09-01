@@ -9,7 +9,8 @@ public class Interact : MonoBehaviour
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject HidingCanvas;
     [SerializeField] private GameObject MainUI;
-    [SerializeField] private GameObject SubInteractButton;
+    [SerializeField] private GameObject SubIntButton;
+    [SerializeField] private GameObject SubIntButton_Cloak;
     [SerializeField] private GameObject Cloak;
     public GameObject[] Items;
     public GameObject[] Notes;  
@@ -46,7 +47,8 @@ public class Interact : MonoBehaviour
 
         if(StaticData.GameStage ==2)
         {
-            SubInteractButton.SetActive(true);
+            SubIntButton.SetActive(true);
+            SubIntButton_Cloak.SetActive(true);
         }
     }
 
@@ -318,7 +320,7 @@ public class Interact : MonoBehaviour
         //Hide & statue
         if (Clicked == false && Cooldown_Time >= 10.0f)
         {
-            if (StaticData.isHiding == true || StaticData.isStatue == true)
+            if (StaticData.isHiding == true)
             {
                 Clicked = true;
                 MainUI.SetActive(false);

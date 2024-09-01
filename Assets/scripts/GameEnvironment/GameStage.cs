@@ -5,9 +5,9 @@ using UnityEngine;
 public class GameStage : MonoBehaviour
 {
     private bool[] Checklist;
-    private int count =0;
     [SerializeField] private GhostMovement Ghost;
     [SerializeField] private GameObject HiddenKey;
+    [SerializeField] private GameObject Cloak;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +17,7 @@ public class GameStage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Check Needed!
         {
             if (StaticData.Note1 == true)
                 Checklist[0] = true;
@@ -58,17 +59,9 @@ public class GameStage : MonoBehaviour
                 Checklist[12] = true;
 
             if (StaticData.Note14 == true)
-                Checklist[13] = true;
+                Checklist[13] = true;   
         }
-
-        for(int i = 0; i<13;i++)
-        {
-            if (Checklist[i] == true)
-            {
-                count++;
-            }
-        }
-        if(count == 13)
+        if (Checklist[0]&& Checklist[1] && Checklist[2] && Checklist[3] && Checklist[4] && Checklist[5] && Checklist[6] && Checklist[7] && Checklist[8] && Checklist[9] && Checklist[10] && Checklist[11] && Checklist[12] && Checklist[13])
         {
             StaticData.GameStage = 2;
         }
@@ -76,6 +69,7 @@ public class GameStage : MonoBehaviour
         if(StaticData.GameStage ==2)
         {
             HiddenKey.SetActive(true);
+            Cloak.SetActive(true);
             Ghost.speed = 5.0f;
             Ghost.waitTime = 0.5f;
             StaticData.BatteryLife = 10;

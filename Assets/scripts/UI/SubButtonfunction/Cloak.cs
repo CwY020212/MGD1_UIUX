@@ -26,6 +26,7 @@ public class Cloak : MonoBehaviour
                 timer = 15.0f;
                 Pressed = false;
                 StaticData.Cloak = false;
+                this.enabled = false;
             }
         }
     }

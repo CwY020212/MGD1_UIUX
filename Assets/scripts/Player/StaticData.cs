@@ -21,20 +21,20 @@ public class StaticData : MonoBehaviour
 
 
     //notes
-    public static bool Note1;
-    public static bool Note2;
-    public static bool Note3;
-    public static bool Note4;
-    public static bool Note5;
-    public static bool Note6;
-    public static bool Note7;
-    public static bool Note8;
-    public static bool Note9;
-    public static bool Note10;
-    public static bool Note11;
-    public static bool Note12;
-    public static bool Note13;
-    public static bool Note14;
+    public static bool Note1 = false;
+    public static bool Note2 = false;
+    public static bool Note3 = false;
+    public static bool Note4 = false;
+    public static bool Note5 = false;
+    public static bool Note6 = false;
+    public static bool Note7 = false;
+    public static bool Note8 = false;
+    public static bool Note9 = false;
+    public static bool Note10 = false;
+    public static bool Note11 = false;
+    public static bool Note12 = false;
+    public static bool Note13 = false;
+    public static bool Note14 = false;
 
     //abilities
     public static bool TV;

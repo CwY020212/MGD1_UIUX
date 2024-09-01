@@ -33,8 +33,10 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private GameObject Cupboard;
     [SerializeField] private GameObject Cupboard_Living;
+    [SerializeField] private GameObject Television;
 
     [SerializeField] private Animator Animate;
+
 
 
     private void Start()
@@ -54,8 +56,6 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Debug.Log(StaticData.isHiding);
         
         if (isPaused == false)
         {
@@ -103,6 +103,7 @@ public class Movement : MonoBehaviour
             Top_Cover.SetActive(false);
             Hidden_Cover.SetActive(true);
             Cupboard_Living.SetActive(true);
+            Television.SetActive(true);
         }
         if (collision.gameObject.CompareTag("Bottom"))
         {
@@ -120,6 +121,7 @@ public class Movement : MonoBehaviour
             Top_Cover.SetActive(true);
             Hidden_Cover.SetActive(true);
             Cupboard_Living.SetActive(false);
+            Television.SetActive(false);
         }
         if (collision.gameObject.CompareTag("Top"))
         {
@@ -137,6 +139,7 @@ public class Movement : MonoBehaviour
             Bottom_Cover.SetActive(true);
             Hidden_Cover.SetActive(false);
             Cupboard.SetActive(true);
+            Television.SetActive(true);
         }
         if (collision.gameObject.CompareTag("Hidden"))
         {
@@ -154,6 +157,7 @@ public class Movement : MonoBehaviour
             Bottom_Cover.SetActive(true);
             Hidden_Cover.SetActive(false);
             Cupboard.SetActive(false);
+            Television.SetActive(true);
         }
     }
 }
