@@ -46,7 +46,7 @@ public class Exit : MonoBehaviour
         //exit
         if (InCoolDown != true)
         {
-            if (StaticData.isHiding == true || StaticData.isStatue == true)
+            if (StaticData.isHiding == true)
             {
                 StaticData.isHiding = false;
                 StaticData.isStatue = false;

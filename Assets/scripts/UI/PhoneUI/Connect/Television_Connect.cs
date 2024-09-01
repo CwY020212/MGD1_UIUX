@@ -18,7 +18,6 @@ public class Television_Connect : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(StaticData.TelevisionInCD);
 
         if(StaticData.TelevisionInCD)
         {

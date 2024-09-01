@@ -7,6 +7,7 @@ public class GameStage : MonoBehaviour
     private bool[] Checklist;
     private int count =0;
     [SerializeField] private GhostMovement Ghost;
+    [SerializeField] private GameObject HiddenKey;
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +75,7 @@ public class GameStage : MonoBehaviour
 
         if(StaticData.GameStage ==2)
         {
+            HiddenKey.SetActive(true);
             Ghost.speed = 5.0f;
             Ghost.waitTime = 0.5f;
             StaticData.BatteryLife = 10;

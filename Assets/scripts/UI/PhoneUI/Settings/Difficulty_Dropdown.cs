@@ -16,7 +16,7 @@ public class Difficulty_Dropdown : MonoBehaviour
     private float DetectY = DetectSizeY;
 
     private const float WarningSizeX = 15.0f; //default
-    private const float WarningSizeY = 4.0f; //default
+    private const float WarningSizeY = 4.5f; //default
     private float WarningX = WarningSizeX;
     private float WarningY = WarningSizeY;
 

@@ -10,6 +10,7 @@ public class Interact : MonoBehaviour
     [SerializeField] private GameObject HidingCanvas;
     [SerializeField] private GameObject MainUI;
     [SerializeField] private GameObject SubInteractButton;
+    [SerializeField] private GameObject Cloak;
     public GameObject[] Items;
     public GameObject[] Notes;  
     public GameObject[] Doorlock;
@@ -177,15 +178,8 @@ public class Interact : MonoBehaviour
                 if (Detection.AbilityInRange[2] == true)
                 {
                     StaticData.Cloak = true;
+                    Destroy(Cloak);
                     StaticData.LineToBeShown = "Cloak Available Now";
-                }
-            }
-            if (StaticData.Mimicking == false)
-            {
-                if (Detection.AbilityInRange[3] == true)
-                {
-                    StaticData.Mimicking = true;
-                    StaticData.LineToBeShown = "Mimicking Available Now";
                 }
             }
         }

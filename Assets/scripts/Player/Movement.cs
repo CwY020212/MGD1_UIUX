@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
     public bool isPaused = false;
     private int layerindex;
 
+    [SerializeField] private GameObject Capsule;
+
     [SerializeField] private GameObject Middle_BackSide;
     [SerializeField] private GameObject Middle_FrontSide;
     [SerializeField] private GameObject Middle_Cover;
@@ -30,6 +32,9 @@ public class Movement : MonoBehaviour
     [SerializeField] private GameObject Hidden_Cover;
 
     [SerializeField] private GameObject Cupboard;
+    [SerializeField] private GameObject Cupboard_Living;
+
+    [SerializeField] private Animator Animate;
 
 
     private void Start()
@@ -49,12 +54,33 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Debug.Log(StaticData.isHiding);
         
         if (isPaused == false)
         {
             hor = VirtualJoystick.GetAxis("Horizontal", 0);
             Ver = VirtualJoystick.GetAxis("Vertical", 0);
             rb.velocity = new Vector2(hor * movespeed * Time.deltaTime, Ver * movespeed * Time.deltaTime);
+        }
+        if(rb.velocity.x < 0)
+        {
+            Capsule.transform.localScale= new Vector3(0.7f,0.7f,1.0f);
+        
+        }
+        else if(rb.velocity.x > 0)
+        {
+            Capsule.transform.localScale = new Vector3(-0.7f, 0.7f, 1.0f);
+        }
+
+
+        if(hor != 0.0f&& Ver!=0.0f)
+        {
+            Animate.SetBool("IsWalking", true);
+        }
+        else
+        {
+            Animate.SetBool("IsWalking", false);
         }
     }
 
@@ -76,6 +102,7 @@ public class Movement : MonoBehaviour
             Bottom_Cover.SetActive(true);
             Top_Cover.SetActive(false);
             Hidden_Cover.SetActive(true);
+            Cupboard_Living.SetActive(true);
         }
         if (collision.gameObject.CompareTag("Bottom"))
         {
@@ -92,6 +119,7 @@ public class Movement : MonoBehaviour
             Bottom_Cover.SetActive(false);
             Top_Cover.SetActive(true);
             Hidden_Cover.SetActive(true);
+            Cupboard_Living.SetActive(false);
         }
         if (collision.gameObject.CompareTag("Top"))
         {
@@ -120,7 +148,7 @@ public class Movement : MonoBehaviour
             Top_FrontSide.SetActive(false);
             Hidden_BackSide.SetActive(true);
             Hidden_FrontSide.SetActive(true);
-            this.gameObject.GetComponent<SortingGroup>().sortingOrder = -5;
+            this.gameObject.GetComponent<SortingGroup>().sortingOrder = -4;
             Top_Cover.SetActive(true);
             Middle_Cover.SetActive(true);
             Bottom_Cover.SetActive(true);

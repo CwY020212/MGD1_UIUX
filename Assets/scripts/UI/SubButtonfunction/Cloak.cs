@@ -17,7 +17,6 @@ public class Cloak : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(timer);
         if(Pressed == true)
         {
             timer -= Time.deltaTime;
@@ -33,7 +32,7 @@ public class Cloak : MonoBehaviour
 
     public void Invisible()
     {
-        if (StaticData.Cloak == false)
+        if (StaticData.Cloak == true)
         {
             Player.tag = "EditorOnly";
             Pressed = true;

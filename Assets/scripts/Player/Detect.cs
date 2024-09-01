@@ -160,6 +160,7 @@ public class Detect : MonoBehaviour
         if (collision.gameObject.CompareTag("HidingSpot"))
         {
             glowing_effect.SetActive(false);
+            StaticData.isHiding = false;
 
         }
         if (collision.gameObject.CompareTag("DoorLock"))
