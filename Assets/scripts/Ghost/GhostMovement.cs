@@ -15,6 +15,7 @@ public class GhostMovement : MonoBehaviour
     private bool once = false;
 
     public HolyWater holyWater;
+    public Movement movement;
     private void Update()
     {
         //to check which point should the ghost go to
@@ -28,35 +29,38 @@ public class GhostMovement : MonoBehaviour
         }
 
         // ghost patrolling
-        if (!StaticData.TelevisionInRing && !StaticData.RadioInRing)
+        if (!movement.isPaused)
         {
-            if (transform.position != patrolPoints[currentPointIndex].position)
+            if (!StaticData.TelevisionInRing && !StaticData.RadioInRing)
             {
-                if (!holyWater.Stunned)
-                    transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPointIndex].position, speed * Time.deltaTime);
-            }
-            else
-            {
-                if (once == false)
+                if (transform.position != patrolPoints[currentPointIndex].position)
                 {
-                    StartCoroutine(WaitForCurrent());
-                    once = true;
+                    if (!holyWater.Stunned)
+                        transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPointIndex].position, speed * Time.deltaTime);
+                }
+                else
+                {
+                    if (once == false)
+                    {
+                        StartCoroutine(WaitForCurrent());
+                        once = true;
+                    }
                 }
             }
-        }
-        else //if alarm ring, ghost priority change
-        {
-            if (transform.position != PrioritizedPoints[PrioritizedPointIndex].position)
+            else //if alarm ring, ghost priority change
             {
-                if (!holyWater.Stunned)
-                    transform.position = Vector2.MoveTowards(transform.position, PrioritizedPoints[PrioritizedPointIndex].position, speed * Time.deltaTime);
-            }
-            else
-            {
-                if (once == false)
+                if (transform.position != PrioritizedPoints[PrioritizedPointIndex].position)
                 {
-                    StartCoroutine(WaitForPrioritized());
-                    once = true;
+                    if (!holyWater.Stunned)
+                        transform.position = Vector2.MoveTowards(transform.position, PrioritizedPoints[PrioritizedPointIndex].position, speed * Time.deltaTime);
+                }
+                else
+                {
+                    if (once == false)
+                    {
+                        StartCoroutine(WaitForPrioritized());
+                        once = true;
+                    }
                 }
             }
         }

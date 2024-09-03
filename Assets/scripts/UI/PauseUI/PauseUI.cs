@@ -7,6 +7,7 @@ public class PauseUI : MonoBehaviour
     [SerializeField] private GameObject PauseMenu;
     [SerializeField] private GameObject MainInGameUI;
 
+    public Movement movement;
     void Start()
     {
         
@@ -20,8 +21,16 @@ public class PauseUI : MonoBehaviour
 
     public void OpenPauseMenu()
     {
-        PauseMenu.SetActive(true);
-        MainInGameUI.SetActive(false);
-        StaticData.isPaused = true;
+        if (movement.isPaused == false)
+            movement.isPaused = true;
+        else
+            movement.isPaused = false;
+
+        if (movement.isPaused)
+        {
+            PauseMenu.SetActive(true);
+            MainInGameUI.SetActive(false);
+            StaticData.isPaused = true;
+        }
     }
 }

@@ -6,6 +6,7 @@ public class ClosePause : MonoBehaviour
 {
     [SerializeField] private GameObject PauseMenu;
     [SerializeField] private GameObject MainInGameUI;
+    public Movement movement;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,11 @@ public class ClosePause : MonoBehaviour
 
     public void ClosePauseMenu()
     {
+        if (movement.isPaused)
+            movement.isPaused = false;
+        else
+            movement.isPaused = true;
+
         PauseMenu.SetActive(false);
         MainInGameUI.SetActive(true);
         StaticData.isPaused = false;

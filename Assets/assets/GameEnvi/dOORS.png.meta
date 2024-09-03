@@ -1,0 +1,309 @@
+fileFormatVersion: 2
+guid: 893082eb20866c14ea544bc10242cd83
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dOORS_5
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 794
+        width: 178
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d836d4e328290c4d9de95943b67f04e
+      internalID: -1682744965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dOORS_7
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 779
+        width: 179
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4053c1cc78da3f5428e063d5e037dd78
+      internalID: 1763837599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      dOORS_0: -1613838573
+      dOORS_1: 1764094763
+      dOORS_10: -1363830067
+      dOORS_100: -721986391
+      dOORS_11: -590158068
+      dOORS_12: 482771097
+      dOORS_13: -2011308571
+      dOORS_14: -742758496
+      dOORS_15: 1920338575
+      dOORS_16: -1458759935
+      dOORS_17: 627294659
+      dOORS_18: -2002809188
+      dOORS_19: 1548493424
+      dOORS_2: -753849491
+      dOORS_20: -1995272952
+      dOORS_21: -900946927
+      dOORS_22: 1675338136
+      dOORS_23: 1414393257
+      dOORS_24: -1663423536
+      dOORS_25: -104748337
+      dOORS_26: -19496874
+      dOORS_27: 725264850
+      dOORS_28: -454877168
+      dOORS_29: -989084908
+      dOORS_3: -687768847
+      dOORS_30: 1952963073
+      dOORS_31: 615510679
+      dOORS_32: 1044535475
+      dOORS_33: 1766719622
+      dOORS_34: 918821461
+      dOORS_35: -807269847
+      dOORS_36: -177354301
+      dOORS_37: -723505112
+      dOORS_38: 1746974393
+      dOORS_39: -288281332
+      dOORS_4: -358499562
+      dOORS_40: 1395808734
+      dOORS_41: -1556650870
+      dOORS_42: 1443307286
+      dOORS_43: 1959593645
+      dOORS_44: -1639402015
+      dOORS_45: 362786375
+      dOORS_46: -1561733456
+      dOORS_47: -1636748734
+      dOORS_48: 1600939033
+      dOORS_49: 718629189
+      dOORS_5: -1682744965
+      dOORS_50: -1566584944
+      dOORS_51: -945564933
+      dOORS_52: 745005031
+      dOORS_53: 86433089
+      dOORS_54: 530461307
+      dOORS_55: -201851871
+      dOORS_56: -1071707124
+      dOORS_57: 517805776
+      dOORS_58: 1872066232
+      dOORS_59: -723618256
+      dOORS_6: -864783896
+      dOORS_60: -1047675892
+      dOORS_61: 44548818
+      dOORS_62: -1026596619
+      dOORS_63: 1797381634
+      dOORS_64: 835805566
+      dOORS_65: -1423560221
+      dOORS_66: -603370877
+      dOORS_67: 1865534386
+      dOORS_68: 81778237
+      dOORS_69: 217524548
+      dOORS_7: 1763837599
+      dOORS_70: -1176197412
+      dOORS_71: -1567249980
+      dOORS_72: -2121638120
+      dOORS_73: 1766561150
+      dOORS_74: 2063636244
+      dOORS_75: 1603465488
+      dOORS_76: 616167621
+      dOORS_77: 376882769
+      dOORS_78: -1210961381
+      dOORS_79: 960920896
+      dOORS_8: -1751824498
+      dOORS_80: -275192859
+      dOORS_81: 2042003243
+      dOORS_82: -573194773
+      dOORS_83: -405689342
+      dOORS_84: -31442318
+      dOORS_85: -1903910132
+      dOORS_86: 992989308
+      dOORS_87: -230709120
+      dOORS_88: -160369635
+      dOORS_89: 1646294683
+      dOORS_9: -856549944
+      dOORS_90: 194194127
+      dOORS_91: -290313029
+      dOORS_92: -1488874718
+      dOORS_93: -723858384
+      dOORS_94: -518852838
+      dOORS_95: 747773476
+      dOORS_96: -1772471503
+      dOORS_97: -1194669043
+      dOORS_98: 1981677184
+      dOORS_99: -755229116
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

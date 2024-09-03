@@ -1,0 +1,366 @@
+fileFormatVersion: 2
+guid: 65df2dfc1e779c8418f686c3cb578d3a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ghost_Anim_0
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 1449
+        width: 641
+        height: 1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25b645370b611c469da138e6d313385
+      internalID: 2111543376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Anim_5
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 1513
+        width: 645
+        height: 1047
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f24420d0faca440a2cd5db6c623227
+      internalID: -1140531050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Anim_8
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1396
+        width: 661
+        height: 1086
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd9c585608bea74c8ab3e213cd7160f
+      internalID: 890973769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Anim_10
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1337
+        width: 644
+        height: 1197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd056630e2ca764da44a730fb5b3c3f
+      internalID: 1002721094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Anim_49
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 366
+        width: 642
+        height: 854
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd76095a08cda844cbd3efd276220e99
+      internalID: 335112196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Anim_51
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 262
+        width: 636
+        height: 1018
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051657a60abf9ab4eba41e5bde3aa428
+      internalID: -641545445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ghost_Anim_0: 2111543376
+      Ghost_Anim_1: -518024433
+      Ghost_Anim_10: 1002721094
+      Ghost_Anim_11: 1747070452
+      Ghost_Anim_12: 2100874142
+      Ghost_Anim_13: 329402415
+      Ghost_Anim_14: 759990825
+      Ghost_Anim_15: 1504954034
+      Ghost_Anim_16: -803040923
+      Ghost_Anim_17: -1453246957
+      Ghost_Anim_18: 353763715
+      Ghost_Anim_19: 134333478
+      Ghost_Anim_2: 1729008157
+      Ghost_Anim_20: 1613127858
+      Ghost_Anim_21: 761800340
+      Ghost_Anim_22: 1420580832
+      Ghost_Anim_23: -34278043
+      Ghost_Anim_24: -933977533
+      Ghost_Anim_25: 127712095
+      Ghost_Anim_26: 1267723350
+      Ghost_Anim_27: -1835043930
+      Ghost_Anim_28: -363018424
+      Ghost_Anim_29: -958550377
+      Ghost_Anim_3: 421100214
+      Ghost_Anim_30: 1549378603
+      Ghost_Anim_31: 2022626789
+      Ghost_Anim_32: 996342945
+      Ghost_Anim_33: -1098586072
+      Ghost_Anim_34: 967919959
+      Ghost_Anim_35: -488311566
+      Ghost_Anim_36: 1089614211
+      Ghost_Anim_37: 642977693
+      Ghost_Anim_38: -1954826084
+      Ghost_Anim_39: -1136029279
+      Ghost_Anim_4: 1097768790
+      Ghost_Anim_40: -1893656318
+      Ghost_Anim_41: 2009695761
+      Ghost_Anim_42: 383476316
+      Ghost_Anim_43: 133513270
+      Ghost_Anim_44: 1164040577
+      Ghost_Anim_45: -68790074
+      Ghost_Anim_46: 1983598433
+      Ghost_Anim_47: -1196637253
+      Ghost_Anim_48: 377891708
+      Ghost_Anim_49: 335112196
+      Ghost_Anim_5: -1140531050
+      Ghost_Anim_50: -640655815
+      Ghost_Anim_51: -641545445
+      Ghost_Anim_52: 663300263
+      Ghost_Anim_53: -541554321
+      Ghost_Anim_54: -1549637143
+      Ghost_Anim_55: -34328972
+      Ghost_Anim_56: 235127565
+      Ghost_Anim_57: 2044072296
+      Ghost_Anim_58: -1112509258
+      Ghost_Anim_59: -513886346
+      Ghost_Anim_6: -1365479246
+      Ghost_Anim_60: -1986542928
+      Ghost_Anim_61: -1210168819
+      Ghost_Anim_62: -1322436744
+      Ghost_Anim_63: -843291204
+      Ghost_Anim_64: 110100158
+      Ghost_Anim_65: -37587321
+      Ghost_Anim_66: -149640094
+      Ghost_Anim_67: 1253758810
+      Ghost_Anim_68: 1035336559
+      Ghost_Anim_69: -1448165101
+      Ghost_Anim_7: 480332393
+      Ghost_Anim_70: -1062166522
+      Ghost_Anim_71: 1801232995
+      Ghost_Anim_72: -1892441881
+      Ghost_Anim_73: -741129546
+      Ghost_Anim_8: 890973769
+      Ghost_Anim_9: -1788356868
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
