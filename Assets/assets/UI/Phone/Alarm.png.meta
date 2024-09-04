@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -147,7 +147,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Alarm_10
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 119
+        width: 299
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a1ea3cebe6e0e498b441f0256122e7
+      internalID: 1174034925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -158,7 +179,33 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Alarm_0: 540074000
+      Alarm_1: 231860824
+      Alarm_10: 1174034925
+      Alarm_11: 1735028993
+      Alarm_12: -1709093117
+      Alarm_13: -1556296672
+      Alarm_14: 2070194444
+      Alarm_15: -1089812063
+      Alarm_16: 1105578997
+      Alarm_17: 2059596034
+      Alarm_18: -951275989
+      Alarm_19: 1933080218
+      Alarm_2: -1331081454
+      Alarm_20: -1757793258
+      Alarm_21: -880272267
+      Alarm_22: 191023829
+      Alarm_23: -1355795138
+      Alarm_24: -720168795
+      Alarm_25: -840296526
+      Alarm_3: 732190958
+      Alarm_4: 561483258
+      Alarm_5: 1167776528
+      Alarm_6: -1774330335
+      Alarm_7: 410834195
+      Alarm_8: -1461962200
+      Alarm_9: 195440304
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

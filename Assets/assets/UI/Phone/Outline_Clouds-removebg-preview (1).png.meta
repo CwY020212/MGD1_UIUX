@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 083b5af608bc9444aa35ba338c61e59f
+guid: fa6f110cba1932b45bd33a6355f4debe
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,12 +149,75 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Difficulty_9
+      name: Outline_Clouds-removebg-preview (1)_0
       rect:
         serializedVersion: 2
-        x: 247
-        y: 301
-        width: 77
+        x: 53
+        y: 302
+        width: 97
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c595557b8b281564291748357864bbf1
+      internalID: 267802393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline_Clouds-removebg-preview (1)_1
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 310
+        width: 126
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7250eaa7d814034ca5bb8d7395fa53a
+      internalID: 1670499908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline_Clouds-removebg-preview (1)_2
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 307
+        width: 119
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff48715b5cf60549980ca068dea840c
+      internalID: 1842628011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline_Clouds-removebg-preview (1)_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 184
+        width: 129
         height: 82
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -163,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0655b0053355104fa0b722b308cbabd
-      internalID: -743327253
+      spriteID: 84186b2fb35a82c44b0aec0b62993444
+      internalID: -381151551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Difficulty_18
+      name: Outline_Clouds-removebg-preview (1)_4
       rect:
         serializedVersion: 2
-        x: 456
-        y: 300
-        width: 78
-        height: 78
+        x: 212
+        y: 188
+        width: 126
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 022f2093a03178c4cb5f1cb077f12a10
-      internalID: -351289359
+      spriteID: 181d3edeb2f1de549ae8010d575bfecc
+      internalID: -1033183890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Difficulty_35
+      name: Outline_Clouds-removebg-preview (1)_5
       rect:
         serializedVersion: 2
-        x: 456
-        y: 174
-        width: 77
-        height: 79
+        x: 391
+        y: 184
+        width: 118
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +268,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b553e123f2cfd7e4abf6ebd8c1f05c7a
-      internalID: -39581858
+      spriteID: 048e9af775439044b9839a6d0cf507b6
+      internalID: 710893488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Difficulty_51
+      name: Outline_Clouds-removebg-preview (1)_6
       rect:
         serializedVersion: 2
-        x: 141
-        y: 47
-        width: 79
-        height: 77
+        x: 43
+        y: 68
+        width: 115
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,8 +289,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9b8cf4574e369c4ea45bca44b5f01e3
-      internalID: -1738743972
+      spriteID: 11ed025f974679b4ebd2fb18c4829ebb
+      internalID: -505275858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline_Clouds-removebg-preview (1)_7
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 69
+        width: 123
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a01a6d26d807e439a1e98a765098ca
+      internalID: -658712414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outline_Clouds-removebg-preview (1)_8
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 66
+        width: 126
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7e6ce32dbc5c545a200ee04575ac65
+      internalID: 1901157044
       vertices: []
       indices: 
       edges: []
@@ -243,66 +348,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Difficulty_0: 1460859607
-      Difficulty_1: 201259126
-      Difficulty_10: -885522689
-      Difficulty_11: -324062974
-      Difficulty_12: 624936528
-      Difficulty_13: -663451423
-      Difficulty_14: 229436342
-      Difficulty_15: -332431487
-      Difficulty_16: 2089215395
-      Difficulty_17: 55887545
-      Difficulty_18: -351289359
-      Difficulty_19: 1243047809
-      Difficulty_2: -2025911586
-      Difficulty_20: 1912843606
-      Difficulty_21: -1258576693
-      Difficulty_22: 11180481
-      Difficulty_23: -224617928
-      Difficulty_24: -1067206399
-      Difficulty_25: 1791865621
-      Difficulty_26: -16329018
-      Difficulty_27: -1526062100
-      Difficulty_28: -506793522
-      Difficulty_29: -1295353565
-      Difficulty_3: -43257369
-      Difficulty_30: -1244727715
-      Difficulty_31: -331049116
-      Difficulty_32: 1310463629
-      Difficulty_33: -1060629376
-      Difficulty_34: -1852569721
-      Difficulty_35: -39581858
-      Difficulty_36: 1517756710
-      Difficulty_37: -1975047654
-      Difficulty_38: -2120032234
-      Difficulty_39: -1065656268
-      Difficulty_4: 608558085
-      Difficulty_40: -116689292
-      Difficulty_41: 1956619899
-      Difficulty_42: -1134639196
-      Difficulty_43: 1822584922
-      Difficulty_44: 1060988239
-      Difficulty_45: -251685056
-      Difficulty_46: 1106744145
-      Difficulty_47: 1798052770
-      Difficulty_48: 85357898
-      Difficulty_49: -1964078491
-      Difficulty_5: 576045612
-      Difficulty_50: -966798835
-      Difficulty_51: -1738743972
-      Difficulty_52: 1371152740
-      Difficulty_53: 898423120
-      Difficulty_54: 2090208681
-      Difficulty_55: -103251072
-      Difficulty_56: 881698801
-      Difficulty_57: 176427468
-      Difficulty_58: -1114400075
-      Difficulty_59: -1765790022
-      Difficulty_6: 1796202565
-      Difficulty_7: -2076465703
-      Difficulty_8: 1725253315
-      Difficulty_9: -743327253
+      Outline_Clouds-removebg-preview (1)_0: 267802393
+      Outline_Clouds-removebg-preview (1)_1: 1670499908
+      Outline_Clouds-removebg-preview (1)_2: 1842628011
+      Outline_Clouds-removebg-preview (1)_3: -381151551
+      Outline_Clouds-removebg-preview (1)_4: -1033183890
+      Outline_Clouds-removebg-preview (1)_5: 710893488
+      Outline_Clouds-removebg-preview (1)_6: -505275858
+      Outline_Clouds-removebg-preview (1)_7: -1862123915
+      Outline_Clouds-removebg-preview (1)_8: -658712414
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
