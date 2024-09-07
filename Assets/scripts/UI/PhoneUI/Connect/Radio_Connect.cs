@@ -67,9 +67,7 @@ public class Radio_Connect : MonoBehaviour
     {
         if (!StaticData.RadioInCD)
         {
-            if (StaticData.RadioConnectionInRange)
-            {
-                if (StaticData.TV && StaticData.Radio)
+            if (StaticData.TV && StaticData.Radio)
                 {
                     if (StaticData.TimerInWork != true)
                     {
@@ -98,11 +96,6 @@ public class Radio_Connect : MonoBehaviour
                         StaticData.LineToBeShown = "TV is not yet connected";
                     }
                 }
-            }
-            else
-            {
-                StaticData.LineToBeShown = "You are not in range now";
-            }
         }
         else
         {

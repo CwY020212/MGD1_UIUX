@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    public float movespeed = 400.0f;
+    public float movespeed = 600.0f;
     private float hor;
     private float Ver;
     public bool isPaused = false;

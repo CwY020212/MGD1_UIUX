@@ -8,6 +8,8 @@ public class GameStage : MonoBehaviour
     [SerializeField] private GhostMovement Ghost;
     [SerializeField] private GameObject HiddenKey;
     [SerializeField] private GameObject Cloak;
+
+    public Movement movement;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +70,7 @@ public class GameStage : MonoBehaviour
 
         if(StaticData.GameStage ==2)
         {
+            movement.movespeed = 800.0f;
             HiddenKey.SetActive(true);
             Cloak.SetActive(true);
             Ghost.speed = 5.0f;

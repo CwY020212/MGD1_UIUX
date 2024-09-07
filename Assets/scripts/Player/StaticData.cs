@@ -7,6 +7,10 @@ using UnityEngine;
 
 public class StaticData : MonoBehaviour
 {
+    public static float brightness = 50;
+
+    public static int diff; //0 = ez, 1 = normal, 2 = hard
+
     //items
     public static bool HolyWater;
     public static bool Crucifix;

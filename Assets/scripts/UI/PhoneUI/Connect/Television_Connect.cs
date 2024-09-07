@@ -67,42 +67,35 @@ public class Television_Connect : MonoBehaviour
     {
         if (!StaticData.TelevisionInCD)
         {
-            if (StaticData.TelevisionConnectionInRange)
+            if (StaticData.TV && StaticData.Radio)
             {
-                if (StaticData.TV && StaticData.Radio)
+                if (StaticData.TimerInWork != true)
                 {
-                    if (StaticData.TimerInWork != true)
-                    {
-                        StaticData.timer = StaticData.minutes + StaticData.seconds;
-                        StaticData.TimerInWork = true;
-                        StaticData.TelevisionInWork = true;
-                        StaticData.LineToBeShown = " TV alarm is now set";
-                        StaticData.TelevisionInCD = true;
-                    }
-                }
-                else
-                {
-                    StaticData.LineToBeShown = "Haven't connected to TV";
-                }
-
-                if (StaticData.TV)
-                {
-                    if (!StaticData.Radio)
-                    {
-                        StaticData.LineToBeShown = "Radio is not yet connected";
-                    }
-                }
-                if (StaticData.Radio)
-                {
-                    if (!StaticData.TV)
-                    {
-                        StaticData.LineToBeShown = "TV is not yet connected";
-                    }
+                    StaticData.timer = StaticData.minutes + StaticData.seconds;
+                    StaticData.TimerInWork = true;
+                    StaticData.TelevisionInWork = true;
+                    StaticData.LineToBeShown = " TV alarm is now set";
+                    StaticData.TelevisionInCD = true;
                 }
             }
             else
             {
-                StaticData.LineToBeShown = "You are not in range now";
+                StaticData.LineToBeShown = "Haven't connected to TV";
+            }
+
+            if (StaticData.TV)
+            {
+                if (!StaticData.Radio)
+                {
+                    StaticData.LineToBeShown = "Radio is not yet connected";
+                }
+            }
+            if (StaticData.Radio)
+            {
+                if (!StaticData.TV)
+                {
+                    StaticData.LineToBeShown = "TV is not yet connected";
+                }
             }
 
 

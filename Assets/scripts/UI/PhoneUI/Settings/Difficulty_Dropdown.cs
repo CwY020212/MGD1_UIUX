@@ -15,22 +15,48 @@ public class Difficulty_Dropdown : MonoBehaviour
     private float DetectX = DetectSizeX;
     private float DetectY = DetectSizeY;
 
-    private const float WarningSizeX = 15.0f; //default
-    private const float WarningSizeY = 4.5f; //default
+    private const float WarningSizeX = 16.0f; //default
+    private const float WarningSizeY = 9f; //default
     private float WarningX = WarningSizeX;
     private float WarningY = WarningSizeY;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        Choice = StaticData.diff;
+        dropdown.value = Choice;
+
+        if (Choice == 0)// Easy
+        {
+            StaticData.BatteryLife = 100;
+            StaticData.Difficulty = true;
+            Ghost_Detect.GetComponent<BoxCollider2D>().size = new Vector2(DetectSizeX, DetectSizeY);
+            Ghost_Warning.GetComponent<BoxCollider2D>().size = new Vector2(WarningSizeX, WarningSizeY);
+        }
+        else if (Choice == 1)// Normal
+        {
+            DetectX = DetectSizeX + 0.5f;
+            DetectY = DetectSizeY + 0.5f;
+            WarningX = WarningSizeX - 3.0f;
+            WarningY = WarningSizeY - 1.0f;
+            StaticData.BatteryLife = 50;
+            StaticData.Difficulty = true;
+            Ghost_Detect.GetComponent<BoxCollider2D>().size = new Vector2(DetectX, DetectY);
+            Ghost_Warning.GetComponent<BoxCollider2D>().size = new Vector2(WarningX, WarningY);
+        }
+        else if (Choice == 2) // Hard
+        {
+            DetectX = DetectSizeX + 1.0f;
+            DetectY = DetectSizeY + 1.0f;
+            WarningX = WarningSizeX - 6.0f;
+            WarningY = WarningSizeY - 3.0f;
+            StaticData.BatteryLife = 30;
+            StaticData.Difficulty = true;
+            Ghost_Detect.GetComponent<BoxCollider2D>().size = new Vector2(DetectX, DetectY);
+            Ghost_Warning.GetComponent<BoxCollider2D>().size = new Vector2(WarningX, WarningY);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     public void GetDropDownValue()
     {
@@ -39,37 +65,37 @@ public class Difficulty_Dropdown : MonoBehaviour
         //Check Needed!!!!!
         if (StaticData.Difficulty == false)
         {
-            if (Choice == 1)// Easy
+            if (Choice == 0)// Easy
             {
                 StaticData.BatteryLife = 100;
                 StaticData.Difficulty = true;
                 Ghost_Detect.GetComponent<BoxCollider2D>().size = new Vector2(DetectSizeX,DetectSizeY);
                 Ghost_Warning.GetComponent<BoxCollider2D>().size = new Vector2(WarningSizeX, WarningSizeY);
             }
-            else if (Choice == 2)// Normal
+            else if (Choice == 1)// Normal
             {
                 DetectX = DetectSizeX + 0.5f;
                 DetectY = DetectSizeY + 0.5f;
                 WarningX = WarningSizeX - 3.0f;
-                WarningY = WarningSizeY - 0.5f;
+                WarningY = WarningSizeY - 1.0f;
                 StaticData.BatteryLife = 50;
                 StaticData.Difficulty = true;
                 Ghost_Detect.GetComponent<BoxCollider2D>().size = new Vector2(DetectX, DetectY);
                 Ghost_Warning.GetComponent<BoxCollider2D>().size = new Vector2(WarningX, WarningY);
             }
-            else if (Choice == 3) // Hard
+            else if (Choice == 2) // Hard
             {
                 DetectX = DetectSizeX + 1.0f;
                 DetectY = DetectSizeY + 1.0f;
                 WarningX = WarningSizeX - 6.0f;
-                WarningY = WarningSizeY - 1.0f;
+                WarningY = WarningSizeY - 3.0f;
                 StaticData.BatteryLife = 30;
                 StaticData.Difficulty = true;
                 Ghost_Detect.GetComponent<BoxCollider2D>().size = new Vector2(DetectX, DetectY);
                 Ghost_Warning.GetComponent<BoxCollider2D>().size = new Vector2(WarningX, WarningY);
             }
         }
-
+        dropdown.value = Choice;
 
     }
 }

@@ -11,14 +11,9 @@ public class Timer_MinuteDropdown : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        dropdown.value = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void GetDropDownValue()
     {
@@ -26,13 +21,14 @@ public class Timer_MinuteDropdown : MonoBehaviour
 
 
         //Check NeedED!!!!!!!!
-        if (Choice == 1)
+        if (Choice == 0)
         {
             StaticData.minutes = 0.0f;
         }
-        else if (Choice == 2)
+        else if (Choice == 1)
         {
             StaticData.minutes = 60.0f;
         }
+        dropdown.value = Choice;
     }
 }
