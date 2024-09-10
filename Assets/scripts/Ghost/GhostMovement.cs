@@ -14,6 +14,7 @@ public class GhostMovement : MonoBehaviour
     private int PrioritizedPointIndex = 0;
     private bool once = false;
 
+    public GameSceneMusic AudioManager;
     public HolyWater holyWater;
     public Movement movement;
     private void Update()
@@ -42,6 +43,7 @@ public class GhostMovement : MonoBehaviour
                 {
                     if (once == false)
                     {
+                        AudioManager.GhostRoar(AudioManager.Ghost_Roar);
                         StartCoroutine(WaitForCurrent());
                         once = true;
                     }

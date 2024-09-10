@@ -22,7 +22,7 @@ public class BrightnessAdjustment : MonoBehaviour
 
     void Update()
     {
-        Glo_light.intensity = slider.value;
+        Glo_light.intensity = slider.value /2;
         num = slider.value * 100;
         num = (int)num;
         brightness_text.text = "" + num;

@@ -21,15 +21,7 @@ public class Interact : MonoBehaviour
     public float Cooldown_Time = Cooldown_Period;
     public Exit Check;
 
-
-
-   
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    public GameSceneMusic AudioManager;
 
     // Update is called once per frame
     void Update()
@@ -62,6 +54,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.HolyWater = true;
                     StaticData.LineToBeShown = "HolyWater x 1";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[0]);
                 }
             }
@@ -72,6 +65,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Crucifix = true;
                     StaticData.LineToBeShown = "Crucifix x 1";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[1]);
                 }
             }
@@ -82,6 +76,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Salt = true;
                     StaticData.LineToBeShown = "Salt x 1";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[2]);
                 }
             }
@@ -92,6 +87,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Pepper = true;
                     StaticData.LineToBeShown = "Pepper x 1";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[3]);
                 }
             }
@@ -102,6 +98,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Hammer = true;
                     StaticData.LineToBeShown = "Hammer x 1";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[4]);
                 }
             }
@@ -112,6 +109,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Key1 = true;
                     StaticData.LineToBeShown = "Key1 x 1";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[5]);
                 }
             }
@@ -122,6 +120,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Key2 = true;
                     StaticData.LineToBeShown = "Key2 x 1";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[6]);
                 }
             }
@@ -132,6 +131,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Key3 = true;
                     StaticData.LineToBeShown = "Key3 x 1";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[7]);
                 }
             }
@@ -142,6 +142,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Key4 = true;
                     StaticData.LineToBeShown = "Key4 x 1";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[8]);
                 }
             }
@@ -152,6 +153,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.HiddenKey = true;
                     StaticData.LineToBeShown = "Hidden Key x 1";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[9]);
                 }
             }
@@ -194,6 +196,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note1 = true;
                     StaticData.LineToBeShown = "Note1 x 1 ";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[0]);
                 }
             }
@@ -203,6 +206,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note2 = true;
                     StaticData.LineToBeShown = "Note2 x 1 ";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[1]);
                 }
             }
@@ -212,6 +216,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note3 = true;
                     StaticData.LineToBeShown = "Note3 x 1 ";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[2]);
                 }
             }
@@ -221,6 +226,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note4 = true;
                     StaticData.LineToBeShown = "Note4 x 1 ";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[3]);
                 }
             }
@@ -230,6 +236,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note5 = true;
                     StaticData.LineToBeShown = "Note5 x 1 ";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[4]);
                 }
             }
@@ -239,6 +246,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note6 = true;
                     StaticData.LineToBeShown = "Note6 x 1 ";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[5]);
                 }
             }
@@ -248,6 +256,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note7 = true;
                     StaticData.LineToBeShown = "Note7 x 1 ";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[6]);
                 }
             }
@@ -258,6 +267,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note8 = true;
                     StaticData.LineToBeShown = "Note8 x 1 ";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[7]);
                 }
             }
@@ -267,6 +277,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note9 = true;
                     StaticData.LineToBeShown = "Note9 x 1 ";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[8]);
                 }
             }
@@ -276,6 +287,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note10 = true;
                     StaticData.LineToBeShown = "Note10 x 1 ";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[9]);
                 }
             }
@@ -285,6 +297,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note11 = true;
                     StaticData.LineToBeShown = "Note11 x 1 ";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[10]);
                 }
             }
@@ -294,6 +307,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note12 = true;
                     StaticData.LineToBeShown = "Note12 x 1 ";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[11]);
                 }
             }
@@ -303,6 +317,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note13 = true;
                     StaticData.LineToBeShown = "Note13 x 1 ";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[12]);
                 }
             }
@@ -312,12 +327,13 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Note14 = true;
                     StaticData.LineToBeShown = "Note14 x 1 ";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[13]);
                 }
             }
         }
 
-        //Hide & statue
+        //Hide
         if (Clicked == false && Cooldown_Time >= 10.0f)
         {
             if (StaticData.isHiding == true)
@@ -327,6 +343,7 @@ public class Interact : MonoBehaviour
                 Player.SetActive(false);
                 HidingCanvas.SetActive(true);
                 StaticData.LineToBeShown = "You are now Hiding";
+                AudioManager.PlaySFXsound(AudioManager.PickUp);
             }
         }
 
@@ -337,10 +354,12 @@ public class Interact : MonoBehaviour
             {
                 Destroy(Doorlock[0]);
                 StaticData.LineToBeShown = "Door is unlocked now";
+                AudioManager.PlaySFXsound(AudioManager.DoorOpen);
             }
             else
             {
-                StaticData.LineToBeShown = "Door is locked";
+                StaticData.LineToBeShown = "Master Room is locked";
+                AudioManager.PlaySFXsound(AudioManager.DoorLock);
             }
         }
 
@@ -351,10 +370,12 @@ public class Interact : MonoBehaviour
             {
                 Destroy(Doorlock[1]);
                 StaticData.LineToBeShown = "Door is unlocked now";
+                AudioManager.PlaySFXsound(AudioManager.DoorOpen);
             }
             else
             {
-                StaticData.LineToBeShown = "Door is locked";
+                StaticData.LineToBeShown = "Single room is locked";
+                AudioManager.PlaySFXsound(AudioManager.DoorLock);
             }
         }
 
@@ -364,10 +385,12 @@ public class Interact : MonoBehaviour
             {
                 Destroy(Doorlock[2]);
                 StaticData.LineToBeShown = "Door is unlocked now";
+                AudioManager.PlaySFXsound(AudioManager.DoorOpen);
             }
             else
             {
-                StaticData.LineToBeShown = "Door is locked";
+                StaticData.LineToBeShown = "Room is locked";
+                AudioManager.PlaySFXsound(AudioManager.DoorLock);
             }
         }
 
@@ -377,10 +400,12 @@ public class Interact : MonoBehaviour
             {
                 Destroy(Doorlock[3]);
                 StaticData.LineToBeShown = "Door is unlocked now";
+                AudioManager.PlaySFXsound(AudioManager.DoorOpen);
             }
             else
             {
-                StaticData.LineToBeShown = "Door is locked";
+                StaticData.LineToBeShown = "Study Room is locked";
+                AudioManager.PlaySFXsound(AudioManager.DoorLock);
             }
         }
 
@@ -390,10 +415,12 @@ public class Interact : MonoBehaviour
             {
                 Destroy(Doorlock[4]);
                 StaticData.LineToBeShown = "Door is unlocked now";
+                AudioManager.PlaySFXsound(AudioManager.DoorOpen);
             }
             else
             {
                 StaticData.LineToBeShown = "Door is locked";
+                AudioManager.PlaySFXsound(AudioManager.DoorLock);
             }
         }
 

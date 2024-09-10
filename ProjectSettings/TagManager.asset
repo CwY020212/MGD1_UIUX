@@ -18,6 +18,7 @@ TagManager:
   - Television
   - Radio
   - Mimicking
+  - Audio
   layers:
   - Default
   - TransparentFX

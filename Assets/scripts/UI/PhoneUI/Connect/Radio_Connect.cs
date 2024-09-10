@@ -13,6 +13,8 @@ public class Radio_Connect : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI timerText;
 
+    public GameSceneMusic AudioManager;
+
     private void Start()
     {
         timerText.text = "No Alarm";
