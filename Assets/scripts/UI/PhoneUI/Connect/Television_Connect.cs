@@ -11,6 +11,8 @@ public class Television_Connect : MonoBehaviour
     private float cooldown_time = 30.0f;
     [SerializeField] private TextMeshProUGUI timerText;
 
+    public GameSceneMusic AudioManager;
+
     private void Start()
     {
         timerText.text = "No Alarm";
@@ -58,6 +60,7 @@ public class Television_Connect : MonoBehaviour
                     timerText.text = "No Alarm";
                     StaticData.timer = StaticData.minutes + StaticData.seconds;
                     StaticData.LineToBeShown = "The Ghost is distracted!";
+                    AudioManager.GhostRoar(AudioManager.Ghost_Roar);
 
                 }
             }
@@ -76,6 +79,7 @@ public class Television_Connect : MonoBehaviour
                     StaticData.TelevisionInWork = true;
                     StaticData.LineToBeShown = " TV alarm is now set";
                     StaticData.TelevisionInCD = true;
+                    AudioManager.GhostRoar(AudioManager.Ghost_Roar);
                 }
             }
             else
@@ -111,5 +115,6 @@ public class Television_Connect : MonoBehaviour
         yield return new WaitForSeconds(15.0f);
         StaticData.TelevisionInRing = false;
         StaticData.LineToBeShown = "The Ghost started to move again!";
+        AudioManager.GhostRoar(AudioManager.Ghost_Roar);
     }
 }

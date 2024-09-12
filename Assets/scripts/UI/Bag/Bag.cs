@@ -17,6 +17,8 @@ public class Bag : MonoBehaviour
     [SerializeField] private GameObject Key2;
     [SerializeField] private GameObject Key3;
     [SerializeField] private GameObject Key4;
+
+    public Animator Manager;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +68,7 @@ public class Bag : MonoBehaviour
 
     public void OnButtonClick()
     {
+        Manager.SetBool("Inventory_Closed", false);
         if (movement.isPaused == false)
             movement.isPaused = true;
         else

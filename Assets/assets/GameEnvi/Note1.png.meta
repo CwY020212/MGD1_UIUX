@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f52250526e464a3438deb185d8c41783
+guid: bae7839b604b59448a6360277cb4cf04
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bed_Side_view_3
+      name: Note1_0
       rect:
         serializedVersion: 2
-        x: 1115
-        y: 909
-        width: 1004
-        height: 533
+        x: 851
+        y: 248
+        width: 800
+        height: 1010
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a32e89b48b048f1439c7ae5de0d1c816
-      internalID: -897772653
+      spriteID: 2a2ef85115b85244a841996c0848a711
+      internalID: -1799771359
       vertices: []
       indices: 
       edges: []
@@ -180,21 +180,29 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bed_Side_view_0: 1395587662
-      Bed_Side_view_1: -1229586321
-      Bed_Side_view_10: 1523683491
-      Bed_Side_view_11: -872177124
-      Bed_Side_view_12: -688822646
-      Bed_Side_view_13: 657603380
-      Bed_Side_view_14: -2008304098
-      Bed_Side_view_2: -2146150754
-      Bed_Side_view_3: -897772653
-      Bed_Side_view_4: 2032414681
-      Bed_Side_view_5: -1575478078
-      Bed_Side_view_6: -1125344867
-      Bed_Side_view_7: -1185821820
-      Bed_Side_view_8: 331734493
-      Bed_Side_view_9: -854603440
+      Note1_0: -1799771359
+      Note1_1: -232514052
+      Note1_10: -654649663
+      Note1_11: -936647780
+      Note1_12: 1477335240
+      Note1_13: -1755754872
+      Note1_14: 612113502
+      Note1_15: 130398630
+      Note1_16: -763430284
+      Note1_17: -1186311801
+      Note1_18: 241188862
+      Note1_19: -1887385872
+      Note1_2: -1920610983
+      Note1_20: -1456242381
+      Note1_21: -1289573952
+      Note1_22: -615600035
+      Note1_3: -2095395106
+      Note1_4: -1145400942
+      Note1_5: -851582404
+      Note1_6: -1160688256
+      Note1_7: 382576155
+      Note1_8: -55799340
+      Note1_9: 1784856747
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

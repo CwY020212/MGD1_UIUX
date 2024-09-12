@@ -61,6 +61,7 @@ public class Radio_Connect : MonoBehaviour
                     timerText.text = "No Alarm";
                     StaticData.timer = StaticData.minutes + StaticData.seconds;
                     StaticData.LineToBeShown = "The Ghost is distracted!";
+                    AudioManager.GhostRoar(AudioManager.Ghost_Roar);
                 }
             }
         }
@@ -71,13 +72,14 @@ public class Radio_Connect : MonoBehaviour
         {
             if (StaticData.TV && StaticData.Radio)
                 {
-                    if (StaticData.TimerInWork != true)
-                    {
-                        StaticData.timer = StaticData.minutes + StaticData.seconds;
-                        StaticData.TimerInWork = true;
-                        StaticData.RadioInWork = true;
-                        StaticData.LineToBeShown = "Radio alarm is set";
-                    }
+                if (StaticData.TimerInWork != true)
+                {
+                    StaticData.timer = StaticData.minutes + StaticData.seconds;
+                    StaticData.TimerInWork = true;
+                    StaticData.RadioInWork = true;
+                    StaticData.LineToBeShown = "Radio alarm is set";
+                    AudioManager.GhostRoar(AudioManager.Ghost_Roar);
+                }
                 }
                 else
                 {
@@ -110,5 +112,6 @@ public class Radio_Connect : MonoBehaviour
         yield return new WaitForSeconds(15.0f);
         StaticData.RadioInRing = false;
         StaticData.LineToBeShown = "The Ghost started to move again!";
+        AudioManager.GhostRoar(AudioManager.Ghost_Roar);
     }
 }

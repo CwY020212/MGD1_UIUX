@@ -37,7 +37,7 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private Animator Animate;
 
-
+    public GameSceneMusic MusicManager;
 
     private void Start()
     {
@@ -62,7 +62,12 @@ public class Movement : MonoBehaviour
             hor = VirtualJoystick.GetAxis("Horizontal", 0);
             Ver = VirtualJoystick.GetAxis("Vertical", 0);
             rb.velocity = new Vector2(hor * movespeed * Time.deltaTime, Ver * movespeed * Time.deltaTime);
+            if (hor > 0.8 && Ver >0.8)
+            {
+                MusicManager.PlaySFXsound(MusicManager.WalkingSound1);
+            }
         }
+
         if(rb.velocity.x < 0)
         {
             Capsule.transform.localScale= new Vector3(0.7f,0.7f,1.0f);

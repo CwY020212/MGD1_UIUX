@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Notes_UI : MonoBehaviour
 {
-    [SerializeField] private GameObject Phone_UI;
     [SerializeField] private GameObject NotesUI;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +19,6 @@ public class Notes_UI : MonoBehaviour
 
     public void Notes_UI_Open()
     {
-        Phone_UI.SetActive(false);
         NotesUI.SetActive(true);
     }
 }

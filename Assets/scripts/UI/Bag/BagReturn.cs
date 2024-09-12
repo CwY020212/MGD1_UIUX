@@ -8,20 +8,17 @@ public class BagReturn : MonoBehaviour
     public Movement movement;
     [SerializeField] private GameObject Inventory_UI;
     [SerializeField] private GameObject MainInGame_UI;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Animator Manager;
 
     public void OnButtonClick()
     {
+        Manager.SetBool("Inventory_Closed", true);
+        StartCoroutine(Wait());
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1.5f);
         if (movement.isPaused == true)
             movement.isPaused = false;
         else
@@ -30,8 +27,8 @@ public class BagReturn : MonoBehaviour
         if (movement.isPaused == false)
         {
             Inventory_UI.SetActive(false);
-            if(movement.isActiveAndEnabled == true)
-            MainInGame_UI.SetActive(true);
+            if (movement.isActiveAndEnabled == true)
+                MainInGame_UI.SetActive(true);
         }
     }
 }

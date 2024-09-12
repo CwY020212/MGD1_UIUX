@@ -5,7 +5,6 @@ using TMPro;
 
 public class Information : MonoBehaviour
 {
-    [SerializeField] private GameObject Phone_UI;
     [SerializeField] private GameObject Information_UI;
     [SerializeField] private TextMeshProUGUI Webpage;
     // Start is called before the first frame update
@@ -22,7 +21,6 @@ public class Information : MonoBehaviour
 
     public void OpenInformation()
     {
-        Phone_UI.SetActive(false);
         Information_UI.SetActive(true);
     }
 }

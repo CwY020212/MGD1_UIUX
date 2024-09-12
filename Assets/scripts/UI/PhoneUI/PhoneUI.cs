@@ -17,6 +17,8 @@ public class PhoneUI : MonoBehaviour
     private int hours;
     private int minutes;
     private int seconds;
+
+    public Animator Manager;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,5 +55,7 @@ public class PhoneUI : MonoBehaviour
             }
             MainInGame_UI.SetActive(false);
         }
+
+        Manager.SetBool("Phone_Closed", false);
     }
 }

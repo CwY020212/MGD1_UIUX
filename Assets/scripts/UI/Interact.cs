@@ -167,6 +167,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.TV = true;
                     StaticData.LineToBeShown = "TV Control Available Now";
+                    AudioManager.PlaySFXsound(AudioManager.Connected);
                 }
             }
             if (StaticData.Radio == false)
@@ -175,6 +176,7 @@ public class Interact : MonoBehaviour
                 {
                     StaticData.Radio = true;
                     StaticData.LineToBeShown = "Radio Control Available Now";
+                    AudioManager.PlaySFXsound(AudioManager.Connected);
                 }
             }
             if (StaticData.Cloak == false)
@@ -184,6 +186,7 @@ public class Interact : MonoBehaviour
                     StaticData.Cloak = true;
                     Destroy(Cloak);
                     StaticData.LineToBeShown = "Cloak Available Now";
+                    AudioManager.PlaySFXsound(AudioManager.PickUp);
                 }
             }
         }

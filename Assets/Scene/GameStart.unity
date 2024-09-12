@@ -2299,7 +2299,6 @@ GameObject:
   - component: {fileID: 776815633}
   - component: {fileID: 776815632}
   - component: {fileID: 776815636}
-  - component: {fileID: 776815637}
   - component: {fileID: 776815642}
   - component: {fileID: 776815641}
   - component: {fileID: 776815640}
@@ -2391,7 +2390,6 @@ MonoBehaviour:
   eventHandler: {fileID: 776815632}
   commandList:
   - {fileID: 776815636}
-  - {fileID: 776815637}
   - {fileID: 776815662}
   - {fileID: 776815642}
   - {fileID: 776815641}
@@ -2437,9 +2435,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 776815652}
+  - {fileID: 776815633}
   selectedCommands:
-  - {fileID: 776815678}
+  - {fileID: 776815662}
   variables: []
   description: 
   stepPause: 0
@@ -2481,23 +2479,6 @@ MonoBehaviour:
   itemId: 1
   indentLevel: 0
   soundClip: {fileID: 8300000, guid: 7efac5886898da64f88b398a5a2d2159, type: 3}
-  volume: 1
-  waitUntilFinished: 0
---- !u!114 &776815637
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776815631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 2
-  indentLevel: 0
-  soundClip: {fileID: 8300000, guid: a47bd44d2575d104f8a830270d6fee91, type: 3}
   volume: 1
   waitUntilFinished: 0
 --- !u!114 &776815638

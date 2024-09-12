@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f52250526e464a3438deb185d8c41783
+guid: 21327806e8b61aa4fbe14e0c72d6396a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bed_Side_view_3
+      name: Radio__TV_UI_0
       rect:
         serializedVersion: 2
-        x: 1115
-        y: 909
-        width: 1004
-        height: 533
+        x: 935
+        y: 732
+        width: 194
+        height: 195
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a32e89b48b048f1439c7ae5de0d1c816
-      internalID: -897772653
+      spriteID: 812459d65d5e26c43a26f4cd41bc5029
+      internalID: -290897098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Radio__TV_UI_2
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 733
+        width: 195
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a73678baeced5141b4e0de8ebe03872
+      internalID: 1714618140
       vertices: []
       indices: 
       edges: []
@@ -180,21 +201,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bed_Side_view_0: 1395587662
-      Bed_Side_view_1: -1229586321
-      Bed_Side_view_10: 1523683491
-      Bed_Side_view_11: -872177124
-      Bed_Side_view_12: -688822646
-      Bed_Side_view_13: 657603380
-      Bed_Side_view_14: -2008304098
-      Bed_Side_view_2: -2146150754
-      Bed_Side_view_3: -897772653
-      Bed_Side_view_4: 2032414681
-      Bed_Side_view_5: -1575478078
-      Bed_Side_view_6: -1125344867
-      Bed_Side_view_7: -1185821820
-      Bed_Side_view_8: 331734493
-      Bed_Side_view_9: -854603440
+      Radio__TV_UI_0: -290897098
+      Radio__TV_UI_1: 1730596783
+      Radio__TV_UI_2: 1714618140
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
