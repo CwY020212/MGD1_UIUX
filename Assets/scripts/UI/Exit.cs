@@ -58,6 +58,7 @@ public class Exit : MonoBehaviour
                 Check.Clicked = false;
                 timer = timeWanted;
                 InCoolDown = true;
+                Check.hidingLight.SetActive(false);
             }
         }
 

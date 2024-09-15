@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Interact : MonoBehaviour
 {
@@ -20,6 +22,19 @@ public class Interact : MonoBehaviour
     private const float Cooldown_Period = 10.0f;
     public float Cooldown_Time = Cooldown_Period;
     public Exit Check;
+
+    [Header("\t PopOuts \t")]
+    public GameObject PopOut;
+    public TMP_Text PopOut_Text;
+    [SerializeField] string[] note_Text;
+    public GameObject hidingLight;
+
+    [Header("\t Item PopOuts \t")]
+    public GameObject ItemPopOut;
+    public TMP_Text Item_text;
+    public string[] Item_TextForEditor;
+
+    public Animator ItemsPOpOut_UI_Animator;
 
     public GameSceneMusic AudioManager;
 
@@ -56,6 +71,7 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "HolyWater x 1";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[0]);
+                    StartCoroutine(Wait(Item_TextForEditor[0]));
                 }
             }
 
@@ -67,6 +83,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Crucifix x 1";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[1]);
+                    StartCoroutine(Wait(Item_TextForEditor[1]));
+
                 }
             }
 
@@ -78,6 +96,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Salt x 1";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[2]);
+                    StartCoroutine(Wait(Item_TextForEditor[2]));
+
                 }
             }
 
@@ -89,6 +109,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Pepper x 1";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[3]);
+                    StartCoroutine(Wait(Item_TextForEditor[3]));
+
                 }
             }
 
@@ -100,6 +122,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Hammer x 1";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[4]);
+                    StartCoroutine(Wait(Item_TextForEditor[4]));
+
                 }
             }
 
@@ -111,6 +135,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Key1 x 1";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[5]);
+                    StartCoroutine(Wait(Item_TextForEditor[5]));
+
                 }
             }
 
@@ -122,6 +148,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Key2 x 1";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[6]);
+                    StartCoroutine(Wait(Item_TextForEditor[6]));
+
                 }
             }
 
@@ -133,6 +161,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Key3 x 1";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[7]);
+                    StartCoroutine(Wait(Item_TextForEditor[7]));
+
                 }
             }
 
@@ -144,6 +174,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Key4 x 1";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[8]);
+                    StartCoroutine(Wait(Item_TextForEditor[8]));
+
                 }
             }
 
@@ -155,6 +187,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Hidden Key x 1";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Items[9]);
+                    StartCoroutine(Wait(Item_TextForEditor[9]));
+
                 }
             }
         }
@@ -201,6 +235,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Note1 x 1 ";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[0]);
+                    PopOut.SetActive(true);
+                    PopOut_Text.text = note_Text[0];
                 }
             }
             if (StaticData.Note2 == false)
@@ -211,6 +247,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Note2 x 1 ";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[1]);
+                    PopOut.SetActive(true);
+                    PopOut_Text.text = note_Text[1];
                 }
             }
             if (StaticData.Note3 == false)
@@ -221,6 +259,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Note3 x 1 ";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[2]);
+                    PopOut.SetActive(true);
+                    PopOut_Text.text = note_Text[2];
                 }
             }
             if (StaticData.Note4 == false)
@@ -231,6 +271,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Note4 x 1 ";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[3]);
+                    PopOut.SetActive(true);
+                    PopOut_Text.text = note_Text[3];
                 }
             }
             if (StaticData.Note5 == false)
@@ -241,6 +283,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Note5 x 1 ";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[4]);
+                    PopOut.SetActive(true);
+                    PopOut_Text.text = note_Text[4];
                 }
             }
             if (StaticData.Note6 == false)
@@ -251,6 +295,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Note6 x 1 ";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[5]);
+                    PopOut.SetActive(true);
+                    PopOut_Text.text = note_Text[5];
                 }
             }
             if (StaticData.Note7 == false)
@@ -261,6 +307,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Note7 x 1 ";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[6]);
+                    PopOut.SetActive(true);
+                    PopOut_Text.text = note_Text[6];
                 }
             }
 
@@ -272,6 +320,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Note8 x 1 ";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[7]);
+                    PopOut.SetActive(true);
+                    PopOut_Text.text = note_Text[7];
                 }
             }
             if (StaticData.Note9 == false)
@@ -282,6 +332,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Note9 x 1 ";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[8]);
+                    PopOut.SetActive(true);
+                    PopOut_Text.text = note_Text[8];
                 }
             }
             if (StaticData.Note10 == false)
@@ -292,6 +344,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Note10 x 1 ";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[9]);
+                    PopOut.SetActive(true);
+                    PopOut_Text.text = note_Text[9];
                 }
             }
             if (StaticData.Note11 == false)
@@ -302,6 +356,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Note11 x 1 ";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[10]);
+                    PopOut.SetActive(true);
+                    PopOut_Text.text = note_Text[10];
                 }
             }
             if (StaticData.Note12 == false)
@@ -312,6 +368,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Note12 x 1 ";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[11]);
+                    PopOut.SetActive(true);
+                    PopOut_Text.text = note_Text[11];
                 }
             }
             if (StaticData.Note13 == false)
@@ -322,6 +380,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Note13 x 1 ";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[12]);
+                    PopOut.SetActive(true);
+                    PopOut_Text.text = note_Text[12];
                 }
             }
             if (StaticData.Note14 == false)
@@ -332,6 +392,8 @@ public class Interact : MonoBehaviour
                     StaticData.LineToBeShown = "Note14 x 1 ";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[13]);
+                    PopOut.SetActive(true);
+                    PopOut_Text.text = note_Text[13];
                 }
             }
         }
@@ -347,6 +409,7 @@ public class Interact : MonoBehaviour
                 HidingCanvas.SetActive(true);
                 StaticData.LineToBeShown = "You are now Hiding";
                 AudioManager.PlaySFXsound(AudioManager.PickUp);
+                hidingLight.SetActive(true);
             }
         }
 
@@ -430,4 +493,18 @@ public class Interact : MonoBehaviour
 
     }
     
+    public void PopoutClose()
+    {
+        PopOut.SetActive(false);
+    }
+
+    IEnumerator Wait(string text)
+    {
+        ItemPopOut.SetActive(true);
+        Item_text.text = text;
+        yield return new WaitForSeconds(3.0f);
+        ItemsPOpOut_UI_Animator.SetBool("PopsClose", true);
+        yield return new WaitForSeconds(2.0f);
+        ItemPopOut.SetActive(false);
+    }
 }

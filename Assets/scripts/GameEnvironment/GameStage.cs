@@ -73,7 +73,7 @@ public class GameStage : MonoBehaviour
 
         if(StaticData.GameStage ==2)
         {
-            movement.movespeed = 800.0f;
+            movement.movespeed = 1000.0f;
             HiddenKey.SetActive(true);
             Cloak.SetActive(true);
             Ghost.speed = 5.0f;

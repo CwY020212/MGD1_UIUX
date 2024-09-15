@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GhostMovement : MonoBehaviour
 {
-    public float speed = 2.0f;
+    public float speed = 1.0f;
     public Transform[] patrolPoints;
     public Transform[] PrioritizedPoints;
     public float waitTime = 2.0f;
