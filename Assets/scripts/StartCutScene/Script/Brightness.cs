@@ -9,7 +9,7 @@ public class Brightness : MonoBehaviour
 {
     public GameObject BrightnessAdjust;
     public GameObject FlowChartButton;
-    public Light2D light;
+    public Light2D lightview;
     public Slider slider;
     public TMP_Text text;
     private float num;
@@ -23,7 +23,7 @@ public class Brightness : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        light.intensity = slider.value/100;
+        lightview.intensity = slider.value/100;
         StaticData.brightness = slider.value;
         num = (int)StaticData.brightness;
         text.text = "" + num;

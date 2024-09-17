@@ -30,7 +30,6 @@ public class Exit : MonoBehaviour
         if (timer <= 0.0f)
         {
             StaticData.isHiding = false;
-            StaticData.isStatue = false;
             Check.Clicked = false;
             Player.SetActive(true);
             HidingCanvas.SetActive(false);
@@ -49,7 +48,6 @@ public class Exit : MonoBehaviour
             if (StaticData.isHiding == true)
             {
                 StaticData.isHiding = false;
-                StaticData.isStatue = false;
                 Player.SetActive(true);
                 HidingCanvas.SetActive(false);
                 MainUI.SetActive(true);

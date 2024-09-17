@@ -19,6 +19,7 @@ TagManager:
   - Radio
   - Mimicking
   - Audio
+  - FakeWall
   layers:
   - Default
   - TransparentFX

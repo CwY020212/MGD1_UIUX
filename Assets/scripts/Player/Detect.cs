@@ -15,7 +15,7 @@ public class Detect : MonoBehaviour
     public void OnTriggerStay2D(Collider2D collision)
     {
         ItemsInRange = new bool[10];
-        AbilityInRange = new bool[4];
+        AbilityInRange = new bool[3];
         NotesInRange = new bool[14];
         int count = 0;
 
@@ -80,10 +80,6 @@ public class Detect : MonoBehaviour
             {
                 AbilityInRange[2] = true;
             }
-            if (collision.gameObject.name == "Mimicking")
-            {
-                AbilityInRange[3] = true;
-            }
         }
 
         for (int j = 1; j < 15; j++)
@@ -123,7 +119,11 @@ public class Detect : MonoBehaviour
 
         }
 
-
+        if(collision.gameObject.CompareTag("FakeWall"))
+        {
+            glowing_effect.SetActive(true);
+            interact.FakeWallInRange = true;
+        }
     }
 
     public void OnTriggerExit2D(Collider2D collision)
@@ -140,7 +140,7 @@ public class Detect : MonoBehaviour
         if (collision.gameObject.CompareTag("Ability"))
         {
             glowing_effect.SetActive(false);
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
                 AbilityInRange[i] = false;
             }
@@ -176,6 +176,12 @@ public class Detect : MonoBehaviour
                 interact.DoorLockInRange[3] = false;
             if (collision.gameObject.name == "HiddenCorridor(HiddenKey)")
                 interact.DoorLockInRange[4] = false;
+        }
+
+        if (collision.gameObject.CompareTag("FakeWall"))
+        {
+            glowing_effect.SetActive(false);
+            interact.FakeWallInRange = false;
         }
 
     }

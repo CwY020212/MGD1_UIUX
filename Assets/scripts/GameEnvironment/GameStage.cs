@@ -1,6 +1,10 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStage : MonoBehaviour
 {
@@ -11,7 +15,31 @@ public class GameStage : MonoBehaviour
 
     public GameSceneMusic AudioManager;
 
+    public bool shown = false;
     public Movement movement;
+
+    [Header("\t Canvas \t")]
+    public GameObject GameCheckCanvas;
+    public GameObject Player;
+    public GameObject PhoneUI;
+    public GameObject NotesUI;
+    public GameObject MainUI;
+    public GameObject HUD;
+    public GameObject PopOut;
+    public GameObject doubleCheck;
+    public Interact interact;
+
+    public TMP_Text double_Text;
+    public string doubleCheck_Text;
+
+    public bool YesCheck = false;
+    public bool NoCheck = false;
+
+    [Header("\t Check Again \t")]
+    public GameObject Wall;
+    public GameObject Trigger;
+
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +49,6 @@ public class GameStage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Check Needed!
         {
             if (StaticData.Note1 == true)
                 Checklist[0] = true;
@@ -71,15 +98,93 @@ public class GameStage : MonoBehaviour
             StaticData.GameStage = 2;
         }
 
-        if(StaticData.GameStage ==2)
+        if(StaticData.GameStage ==2 &&shown == false)
         {
-            movement.movespeed = 1000.0f;
+            MainUI.SetActive(false);
+            HUD.SetActive(false);
+            PopOut.SetActive(false);
+            Ghost.speed = 0.0f;
+            shown = true;
+            StartCoroutine(Wait());
+            
+        }   
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(3.0f);
+        GameCheckCanvas.SetActive(true);
+        Player.transform.position = new Vector3(-9, -14, 0);
+    }
+
+    public void Yes()
+    {
+        YesCheck = true;
+        doubleCheck.SetActive(true);
+        double_Text.text = doubleCheck_Text ;
+    }
+
+    public void CheckAgain()
+    {
+        if (movement.isPaused == true)
+            movement.isPaused = false;
+        else
+            movement.isPaused = true;
+
+        animator.SetBool("StageClosed", true);
+        GameCheckCanvas.SetActive(false);
+        PhoneUI.SetActive(true);
+        NotesUI.SetActive(true);
+        Wall.SetActive(true);
+        Trigger.SetActive(true);
+    }
+
+    public void No()
+    {
+        NoCheck = true;
+        doubleCheck.SetActive(true);
+        double_Text.text = "Won't you regret?";
+    }
+
+    public void doubleYes()
+    {
+        if (YesCheck == true)
+        {
+            StaticData.LineToBeShown = "Last Game Stage";
+            movement.movespeed = 1200.0f;
             HiddenKey.SetActive(true);
             Cloak.SetActive(true);
-            Ghost.speed = 5.0f;
+            Ghost.speed = 3.0f;
             Ghost.waitTime = 0.5f;
             StaticData.BatteryLife = 10;
-            StaticData.LineToBeShown = "New Website in Phone!";
+            MainUI.SetActive(true);
+            HUD.SetActive(true);
+            GameCheckCanvas.SetActive(false);
+
+            Wall.SetActive(false);
+            Trigger.SetActive(false);
+            interact.SubIntButton.SetActive(true);
+            interact.SubIntButton_Cloak.SetActive(true);
         }
+    }
+
+    public void YesNo()
+    {
+        doubleCheck.SetActive(false);
+        GameCheckCanvas.SetActive(true);
+        YesCheck = false;
+    }
+
+    public void NoYes()
+    {
+        if(NoCheck == true)
+            SceneManager.LoadScene(3); // Ending First
+    }
+
+    public void NoNo()
+    {
+        doubleCheck.SetActive(false);
+        GameCheckCanvas.SetActive(true);
+        NoCheck = false;
     }
 }

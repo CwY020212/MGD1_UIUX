@@ -6,12 +6,6 @@ public class HolyWater : MonoBehaviour
 {
     public bool Stunned = false;
     private float timer =10.0f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -24,6 +18,7 @@ public class HolyWater : MonoBehaviour
                 StaticData.HolyWater = false;
                 timer = 10.0f;
                 this.enabled = false;
+                StaticData.LineToBeShown = "Stun finished";
             }
         }
     }
@@ -33,6 +28,16 @@ public class HolyWater : MonoBehaviour
         if(StaticData.HolyWater)
         {
             Stunned = true;
+            StaticData.LineToBeShown = "Ghost is now stunned";
+        }
+        else
+        {
+            StaticData.LineToBeShown = "Haven't collected Holy Water";
+        }
+
+        if(this.enabled == false)
+        {
+            StaticData.LineToBeShown = "Item is used";
         }
     }
 }

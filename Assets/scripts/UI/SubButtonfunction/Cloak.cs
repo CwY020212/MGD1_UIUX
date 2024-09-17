@@ -27,6 +27,7 @@ public class Cloak : MonoBehaviour
                 Pressed = false;
                 StaticData.Cloak = false;
                 this.enabled = false;
+                StaticData.LineToBeShown = "Invisible finish";
             }
         }
     }
@@ -37,6 +38,16 @@ public class Cloak : MonoBehaviour
         {
             Player.tag = "EditorOnly";
             Pressed = true;
+            StaticData.LineToBeShown = "You are now invisible";
+        }
+        else
+        {
+            StaticData.LineToBeShown = "Haven't Collected Cloak";
+        }
+
+        if (this.enabled == false)
+        {
+            StaticData.LineToBeShown = "Item is used";
         }
     }
 }

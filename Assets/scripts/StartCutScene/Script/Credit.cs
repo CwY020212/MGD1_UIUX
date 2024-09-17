@@ -7,11 +7,21 @@ public class Credit : MonoBehaviour
 {
     public GameObject BrightnessAdjust;
     public GameObject CreditImage;
+    public GameObject title;
+    public GameObject flowchart_button;
     
 
     void Start()
     {
         StartCoroutine(CreditLoad());
+    }
+
+    private void Update()
+    {
+        if (flowchart_button.activeInHierarchy)
+        {
+            title.SetActive(true);
+        }
     }
 
     IEnumerator CreditLoad()

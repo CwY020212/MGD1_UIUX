@@ -11,8 +11,8 @@ public class Interact : MonoBehaviour
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject HidingCanvas;
     [SerializeField] private GameObject MainUI;
-    [SerializeField] private GameObject SubIntButton;
-    [SerializeField] private GameObject SubIntButton_Cloak;
+    public GameObject SubIntButton;
+    public GameObject SubIntButton_Cloak;
     [SerializeField] private GameObject Cloak;
     public GameObject[] Items;
     public GameObject[] Notes;  
@@ -38,6 +38,8 @@ public class Interact : MonoBehaviour
 
     public GameSceneMusic AudioManager;
 
+    public bool FakeWallInRange = false;
+    public GameObject FakeWall;
     // Update is called once per frame
     void Update()
     {
@@ -50,12 +52,6 @@ public class Interact : MonoBehaviour
                 Cooldown_Time = Cooldown_Period;
                 StaticData.LineToBeShown = "Hiding Cooldown Finish";
             }
-        }
-
-        if(StaticData.GameStage ==2)
-        {
-            SubIntButton.SetActive(true);
-            SubIntButton_Cloak.SetActive(true);
         }
     }
 
@@ -490,7 +486,11 @@ public class Interact : MonoBehaviour
             }
         }
 
-
+        if(FakeWallInRange)
+        {
+            Destroy(FakeWall);
+            //Load Cutscene
+        }
     }
     
     public void PopoutClose()
