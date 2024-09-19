@@ -53,12 +53,12 @@ public class Tutorial : MonoBehaviour
             Image3.SetActive(false);
             Image2.SetActive(true);
         }
-        if(Lines_Index == 4)
+        if(Lines_Index == 6)
         {
             Image2.SetActive(false);
             Image4.SetActive(true);
         }
-        if (Lines_Index == 5)
+        if (Lines_Index == 8)
         {
             Image4.SetActive(false);
         }

@@ -14,6 +14,7 @@ public class Checking : MonoBehaviour
     [SerializeField] private TMP_Dropdown dropdown;
     [SerializeField] private GameObject Ghost_Detect;
     [SerializeField] private GameObject Ghost_Warning;
+    public GhostMovement ghost;
 
     private const float DetectSizeX = 2.0f; //default
     private const float DetectSizeY = 1.5f; //default
@@ -36,26 +37,29 @@ public class Checking : MonoBehaviour
             StaticData.Difficulty = true;
             Ghost_Detect.GetComponent<BoxCollider2D>().size = new Vector2(DetectSizeX, DetectSizeY);
             Ghost_Warning.GetComponent<BoxCollider2D>().size = new Vector2(WarningSizeX, WarningSizeY);
+            ghost.speed = 1.0f;
         }
         else if (DiffScript.Choice == 1)// Normal
         {
-            DetectX = DetectSizeX + 0.5f;
-            DetectY = DetectSizeY + 0.5f;
+            DetectX = DetectSizeX + 1.0f;
+            DetectY = DetectSizeY + 1.0f;
             WarningX = WarningSizeX - 3.0f;
             WarningY = WarningSizeY - 1.0f;
-            StaticData.BatteryLife = 50;
+            StaticData.BatteryLife = 60;
             StaticData.Difficulty = true;
+            ghost.speed = 1.5f;
             Ghost_Detect.GetComponent<BoxCollider2D>().size = new Vector2(DetectX, DetectY);
             Ghost_Warning.GetComponent<BoxCollider2D>().size = new Vector2(WarningX, WarningY);
         }
         else if (DiffScript.Choice == 2) // Hard
         {
-            DetectX = DetectSizeX + 1.0f;
-            DetectY = DetectSizeY + 1.0f;
+            DetectX = DetectSizeX + 1.5f;
+            DetectY = DetectSizeY + 1.5f;
             WarningX = WarningSizeX - 6.0f;
             WarningY = WarningSizeY - 3.0f;
-            StaticData.BatteryLife = 30;
+            StaticData.BatteryLife = 40;
             StaticData.Difficulty = true;
+            ghost.speed = 2.0f;
             Ghost_Detect.GetComponent<BoxCollider2D>().size = new Vector2(DetectX, DetectY);
             Ghost_Warning.GetComponent<BoxCollider2D>().size = new Vector2(WarningX, WarningY);
         }

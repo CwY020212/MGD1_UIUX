@@ -26,7 +26,23 @@ public class HowToMove : MonoBehaviour
         Panel1.SetActive(true);
         Panel2.SetActive(false);
         Panel3.SetActive(false);
-        Webpage.text = " Page 1 Waiting to be filled.";
+        Webpage.text = "Game Movement:" +
+            "<br>" +
+            "<br>Virtual Joystick   -   Movement" +
+            "<br>Hand Button        -   Interaction" +
+            "<br>Phone Button       -   Sabotage and information purpose" +
+            "<br>Bag Button         -   Inventory system(to check what you get)" +
+            "<br>Holy Water Button  -   To stun the ghost" +
+            "<br>Cloask Button      -   To be invisible" +
+            "<br>Pause Button       -   To adjust overall game setting" +
+            "<br>" +
+            "<br>Game UI Recognization:" +
+            "<br>" +
+            "<br>Red Screen         -   Penanggal is around you(causing player to be hard to interact with objects)" +
+            "<br>Yellow Button(Glow)-   Interactable items around you" +
+            "<br>Connect Button     -   To create distraction in ghost's path" +
+            "<br>Notes Button       -   To check the game story" +
+            "<br>Setting Button     -   To adjust In-game setting";
 
     }
 }

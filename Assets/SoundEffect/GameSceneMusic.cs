@@ -6,9 +6,9 @@ using UnityEngine.Audio;
 public class GameSceneMusic : MonoBehaviour
 {
     [Header("\t Audio Source \t")]
-    [SerializeField] AudioSource Music;
-    [SerializeField] AudioSource SFX;
-    [SerializeField] AudioSource Ghost;
+    public AudioSource Music;
+    public AudioSource SFX;
+    public AudioSource Ghost;
 
     [Header("\t Bg Audio Clips \t")]
     public AudioClip Background;
@@ -44,5 +44,10 @@ public class GameSceneMusic : MonoBehaviour
     public void GhostRoar(AudioClip clip)
     {
         Ghost.PlayOneShot(clip);
+    }
+
+    public void Clear(AudioSource Source)
+    {
+        Source.Stop();
     }
 }

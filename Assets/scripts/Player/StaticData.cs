@@ -55,6 +55,7 @@ public class StaticData : MonoBehaviour
     //public static bool Note13 = true;
     //public static bool Note14 = true;
 
+
     //abilities
     public static bool TV;
     public static bool Radio;

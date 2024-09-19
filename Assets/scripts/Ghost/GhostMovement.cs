@@ -37,7 +37,9 @@ public class GhostMovement : MonoBehaviour
                 if (transform.position != patrolPoints[currentPointIndex].position)
                 {
                     if (!holyWater.Stunned)
+                    {
                         transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPointIndex].position, speed * Time.deltaTime);
+                    }
                 }
                 else
                 {
@@ -66,7 +68,6 @@ public class GhostMovement : MonoBehaviour
                 }
             }
         }
-
     }
 
     IEnumerator WaitForCurrent()

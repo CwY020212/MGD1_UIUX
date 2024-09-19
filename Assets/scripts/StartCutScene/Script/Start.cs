@@ -8,6 +8,7 @@ public class Start : MonoBehaviour
     public GameObject flowChart_Button;
     public Animator title_animator;
 
+    public AudioSource Music;
     public void Title()
     {
         title_animator.SetBool("Clicked", true);
@@ -19,6 +20,7 @@ public class Start : MonoBehaviour
     {
         yield return new WaitForSeconds(5.0f);
         flowchart.SetActive(true);
+        Music.Stop();
         
     }
 }

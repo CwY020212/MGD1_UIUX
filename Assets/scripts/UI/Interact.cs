@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class Interact : MonoBehaviour
 {
@@ -26,7 +27,6 @@ public class Interact : MonoBehaviour
     [Header("\t PopOuts \t")]
     public GameObject PopOut;
     public TMP_Text PopOut_Text;
-    [SerializeField] string[] note_Text;
     public GameObject hidingLight;
 
     [Header("\t Item PopOuts \t")]
@@ -40,6 +40,7 @@ public class Interact : MonoBehaviour
 
     public bool FakeWallInRange = false;
     public GameObject FakeWall;
+    public GameObject Load;
     // Update is called once per frame
     void Update()
     {
@@ -232,7 +233,11 @@ public class Interact : MonoBehaviour
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[0]);
                     PopOut.SetActive(true);
-                    PopOut_Text.text = note_Text[0];
+                    PopOut_Text.text = "20XX/06/15" +
+                "<br>For those who come back. Last Warning" +
+                "<br>This house is abandoned, and our only task is done." +
+                "<br>Shut your mouth up to the unbelievers." +
+                "<br>Burn this note and leave here.";
                 }
             }
             if (StaticData.Note2 == false)
@@ -244,7 +249,13 @@ public class Interact : MonoBehaviour
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[1]);
                     PopOut.SetActive(true);
-                    PopOut_Text.text = note_Text[1];
+                    PopOut_Text.text = "Name : Savir" +
+                "<br>Age : 26" +
+                "<br>Sex : F" +
+                "<br>Reason : " +
+                "<br>   She's just a fucked up piece of shit. " +
+                "She was just trying to ruin our lives by winning the trophy using some ugly and annoying black magics" +
+                "<br>She deserved to be here.";
                 }
             }
             if (StaticData.Note3 == false)
@@ -256,7 +267,13 @@ public class Interact : MonoBehaviour
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[2]);
                     PopOut.SetActive(true);
-                    PopOut_Text.text = note_Text[2];
+                    PopOut_Text.text = "200X/04/20" +
+                "<br>She is just sitting in front of the TV for whole day. I wonder-/-/-/-/-/-/-/" +
+                "<br>I closed the TV just now, and she left." +
+                "<br>She even now is trying to learn some racing things from that stupid TV." +
+                "That TV is kinda complicated, and she's from outside." +
+                "<br>She must be doing some stuff that we can't understand to tell Mark." +
+                "<br>Sad Mark.";
                 }
             }
             if (StaticData.Note4 == false)
@@ -268,7 +285,12 @@ public class Interact : MonoBehaviour
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[3]);
                     PopOut.SetActive(true);
-                    PopOut_Text.text = note_Text[3];
+                    PopOut_Text.text = "200X/05/16" +
+                "<br>Now she is eating. Marson told me to leave her to be hungry." +
+                "<br>They wanted to do something." +
+                "<br>She's getting used to her life now. That's a good news." +
+                "She'll know when she was trying to steal our lives, " +
+                "the real problems that we've tasted ain't that tasty.";
                 }
             }
             if (StaticData.Note5 == false)
@@ -280,7 +302,15 @@ public class Interact : MonoBehaviour
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[4]);
                     PopOut.SetActive(true);
-                    PopOut_Text.text = note_Text[4];
+                    PopOut_Text.text = "200X/05/20" +
+                "<br>A nice day I see. Jalden is so smart lol." +
+                "He can find a place like this that none of us know about here." +
+                "<br>Best Place Ever." +
+                "<br>I wish to see Mark's face. His face must be funny lol." +
+                "Look at his wife now, another naked stupid bitch here." +
+                "<br>A stupid woman with a useless man." +
+                "<br>Yeah." +
+                "<br>Best Place Ever.";
                 }
             }
             if (StaticData.Note6 == false)
@@ -292,7 +322,15 @@ public class Interact : MonoBehaviour
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[5]);
                     PopOut.SetActive(true);
-                    PopOut_Text.text = note_Text[5];
+                    PopOut_Text.text = "200X/05/22" +
+                "<br>Mark just came to here LOLLLLLLLLLLLLLLLLLL" +
+                "<br>He was just literally standing inside of the house but not aware of his bitch." +
+                "<br>Watching that was so much funniner than taking care of this." +
+                "<br>Luckily though, that bitch started to walk around in the house." +
+                "Marson had told me that there won't be any place for that bitch to hide herself," +
+                "but still, it can be dangerous what if Mark finds out what's happening here." +
+                "<br>I'd better tell Claris to make him stay on a position." +
+                "<br>A policeman should be fine.";
                 }
             }
             if (StaticData.Note7 == false)
@@ -304,7 +342,13 @@ public class Interact : MonoBehaviour
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[6]);
                     PopOut.SetActive(true);
-                    PopOut_Text.text = note_Text[6];
+                    PopOut_Text.text = "200X/06/15" +
+                "<br>It can be really boring to stay at here, so I get another fantasy thing from her house to here." +
+                "<br>But, how comes this motherfucker has such complicated thing in her house, and this is not even about racing." +
+                "Jalden said that this must be the secret those motherfuckers've been hiding before." +
+                "<br>It is so complicated that I see how they won the racing trophy with some simple steps." +
+                "<br>Black magics huh? Yeah." +
+                "<br>You shit unbeliever.";
                 }
             }
 
@@ -317,7 +361,9 @@ public class Interact : MonoBehaviour
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[7]);
                     PopOut.SetActive(true);
-                    PopOut_Text.text = note_Text[7];
+                    PopOut_Text.text = "200X/06/17" +
+                "<br>Finally! Marson is ready for the work." +
+                "<br>Now we are letting that bitch to have her own redemption.";
                 }
             }
             if (StaticData.Note9 == false)
@@ -329,7 +375,22 @@ public class Interact : MonoBehaviour
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[8]);
                     PopOut.SetActive(true);
-                    PopOut_Text.text = note_Text[8];
+                    PopOut_Text.text = "200X/09/01" +
+                "<br>It takes weeks." +
+                "<br>It takes /-/weeks." +
+                "<br>It takes weeks." +
+                "<br>It take-/-/-/s weeks." +
+                "<br>It takes weeks." +
+                "<br>It takes w/-/-/-/eeks." +
+                "<br>It t-/-/-/-akes weeks." +
+                "<br>It takes wee-ks." +
+                "<br>It tak-/-/-//-es weeks." +
+                "<br>I/-t ta/-kes /-//weeks." +
+                "<br>I/-/t tak-/es wee/-/--ks." +
+                "<br>I-/t/// takes/ wee////ks." +
+                "<br>It take'[-0/0s 0--/9--/eeks." +
+                "<br>It- /-/-takes/-0/['; wee/-/-ks." +
+                "<br>and no-/-/-/w, FINA-/-LLY-/-/-/-/-/-/-/-";
                 }
             }
             if (StaticData.Note10 == false)
@@ -341,7 +402,17 @@ public class Interact : MonoBehaviour
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[9]);
                     PopOut.SetActive(true);
-                    PopOut_Text.text = note_Text[9];
+                    PopOut_Text.text = "Marson:" +
+                "<br>I'm writing this not for other purposes." +
+                "<br>I wonder which step was I wrong? Those steps should have not been wrong." +
+                "I have done exactly like Claris said though, that woman just will not turn into Penanggal." +
+                "<br>I should have made it without hesitation, but it comes out that it seems to be too late." +
+                "That woman is 'stopped', from every view. Her time, her body, her blood, her mind, and most likely her soul." +
+                "<br>I can't do anything else to that woman already. Maybe we should just stop here before it is too late." +
+                "<br>I'm sure that you won't say yes easily, so forgive me only leaving a letter to you." +
+                "<br>" +
+                "<br>From " +
+                "<br>Jalden";
                 }
             }
             if (StaticData.Note11 == false)
@@ -353,7 +424,10 @@ public class Interact : MonoBehaviour
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[10]);
                     PopOut.SetActive(true);
-                    PopOut_Text.text = note_Text[10];
+                    PopOut_Text.text = "Phone" +
+                "<br>Words" +
+                "<br>From End" +
+                "<br>To Beginning";
                 }
             }
             if (StaticData.Note12 == false)
@@ -365,7 +439,19 @@ public class Interact : MonoBehaviour
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[11]);
                     PopOut.SetActive(true);
-                    PopOut_Text.text = note_Text[11];
+                    PopOut_Text.text = "Jalden - Lost" +
+                "<br>Jack - Lost" +
+                "<br>Marson - -/-/-/-/" +
+                "<br>Claris - -/--/-/-/-///" +
+                "<br>Brekham - Lost" +
+                "<br>Srad - ---////-/-/-/" +
+                "<br>Monk - ///-/-/-///" +
+                "<br>Criss - Lost" +
+                "<br>LZY - Lost" +
+                "<br>Terr - Lost" +
+                "<br>Chekin - /-//-';'-/';;'-/" +
+                "<br>Tvon - -/-/-/--/--//" +
+                "<br>LWX - ---/-/-/-/-/";
                 }
             }
             if (StaticData.Note13 == false)
@@ -377,7 +463,12 @@ public class Interact : MonoBehaviour
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[12]);
                     PopOut.SetActive(true);
-                    PopOut_Text.text = note_Text[12];
+                    PopOut_Text.text = "Jack was making these notes. From the amount I can see that he loved to write things." +
+                "<br>I'm hiding one of the papers here." +
+                "<br>There should always be something left behind." +
+                "<br>People." +
+                "<br>And that's always because something that someone had done." +
+                "<br>The beginning was the reason I am here.";
                 }
             }
             if (StaticData.Note14 == false)
@@ -389,7 +480,7 @@ public class Interact : MonoBehaviour
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
                     Destroy(Notes[13]);
                     PopOut.SetActive(true);
-                    PopOut_Text.text = note_Text[13];
+                    PopOut_Text.text = "I love you";
                 }
             }
         }
@@ -488,8 +579,16 @@ public class Interact : MonoBehaviour
 
         if(FakeWallInRange)
         {
-            Destroy(FakeWall);
-            //Load Cutscene
+            if (StaticData.Hammer)
+            {
+                Destroy(FakeWall);
+                StaticData.LineToBeShown = "Wall is broken now";
+                StartCoroutine(LoadScene());
+            }
+            else
+            {
+                StaticData.LineToBeShown = "Havent collected hammer";
+            }
         }
     }
     
@@ -506,5 +605,13 @@ public class Interact : MonoBehaviour
         ItemsPOpOut_UI_Animator.SetBool("PopsClose", true);
         yield return new WaitForSeconds(2.0f);
         ItemPopOut.SetActive(false);
+    }
+
+    IEnumerator LoadScene()
+    { 
+        Load.SetActive(true);
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene(4);
+
     }
 }

@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -147,7 +147,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Wall_Texture_0
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 653
+        width: 287
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666794698210636428877834fd55f9b3
+      internalID: -1585333373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -158,7 +179,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wall_Texture_0: -1585333373
+      Wall_Texture_1: 622497147
+      Wall_Texture_10: -671550624
+      Wall_Texture_11: 1802904124
+      Wall_Texture_12: 1376925249
+      Wall_Texture_13: -569537395
+      Wall_Texture_14: 370663637
+      Wall_Texture_15: -1684147499
+      Wall_Texture_16: 6117019
+      Wall_Texture_17: -63221026
+      Wall_Texture_18: -1552515245
+      Wall_Texture_19: -2004901704
+      Wall_Texture_2: 693480728
+      Wall_Texture_20: -1668860815
+      Wall_Texture_21: -1207529380
+      Wall_Texture_22: -1356113765
+      Wall_Texture_23: -1609645081
+      Wall_Texture_24: -2087103088
+      Wall_Texture_25: -1809469547
+      Wall_Texture_26: -1744161866
+      Wall_Texture_27: 586798814
+      Wall_Texture_28: 743832230
+      Wall_Texture_29: -623447964
+      Wall_Texture_3: -505265841
+      Wall_Texture_4: 698390366
+      Wall_Texture_5: 1598340250
+      Wall_Texture_6: -357553727
+      Wall_Texture_7: 375401186
+      Wall_Texture_8: -371413013
+      Wall_Texture_9: -244191501
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

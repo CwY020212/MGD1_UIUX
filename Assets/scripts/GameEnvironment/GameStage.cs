@@ -94,7 +94,6 @@ public class GameStage : MonoBehaviour
         }
         if (Checklist[0]&& Checklist[1] && Checklist[2] && Checklist[3] && Checklist[4] && Checklist[5] && Checklist[6] && Checklist[7] && Checklist[8] && Checklist[9] && Checklist[10] && Checklist[11] && Checklist[12] && Checklist[13])
         {
-            AudioManager.PlayBackgroundSound(AudioManager.Background_EndStage);
             StaticData.GameStage = 2;
         }
 
@@ -150,6 +149,8 @@ public class GameStage : MonoBehaviour
     {
         if (YesCheck == true)
         {
+            AudioManager.Clear(AudioManager.Music);
+            AudioManager.PlayBackgroundSound(AudioManager.Background_EndStage);
             StaticData.LineToBeShown = "Last Game Stage";
             movement.movespeed = 1200.0f;
             HiddenKey.SetActive(true);

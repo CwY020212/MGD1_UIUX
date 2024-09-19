@@ -1,0 +1,258 @@
+fileFormatVersion: 2
+guid: fb48c9efb7b66ea4193e717d655d07c8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Music_box1_12
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 560
+        width: 518
+        height: 832
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d8a82e917a91a45bef88d6d46f3562
+      internalID: 2053202486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Music_box1_0: -2130201214
+      Music_box1_1: 2036925542
+      Music_box1_10: 1409457736
+      Music_box1_11: 832824788
+      Music_box1_12: 2053202486
+      Music_box1_13: -835779168
+      Music_box1_14: -730353187
+      Music_box1_15: -982781836
+      Music_box1_16: -1046972229
+      Music_box1_17: -1340836986
+      Music_box1_18: -644628449
+      Music_box1_19: 1708900090
+      Music_box1_2: -1310496233
+      Music_box1_20: -962663805
+      Music_box1_21: 941542758
+      Music_box1_22: -541122873
+      Music_box1_23: -111560895
+      Music_box1_24: -692344812
+      Music_box1_25: -1711745397
+      Music_box1_26: -1595388587
+      Music_box1_27: -521989106
+      Music_box1_28: 192703714
+      Music_box1_29: 500538539
+      Music_box1_3: 617689255
+      Music_box1_30: 2119912358
+      Music_box1_31: -412315034
+      Music_box1_32: 1681507032
+      Music_box1_33: -1955936553
+      Music_box1_34: 1948739132
+      Music_box1_35: -1970488618
+      Music_box1_36: -163646785
+      Music_box1_37: -949322656
+      Music_box1_38: 1248920987
+      Music_box1_39: -1244504646
+      Music_box1_4: 268847160
+      Music_box1_40: -163500340
+      Music_box1_41: -1818287453
+      Music_box1_42: -1763368323
+      Music_box1_43: 1583300406
+      Music_box1_44: -1423565293
+      Music_box1_45: 180264176
+      Music_box1_46: -819628443
+      Music_box1_47: 632097411
+      Music_box1_48: -1040492533
+      Music_box1_49: -813790075
+      Music_box1_5: -1319462282
+      Music_box1_50: 1174499209
+      Music_box1_51: -646638008
+      Music_box1_52: -1128545232
+      Music_box1_53: 101613628
+      Music_box1_54: 351605812
+      Music_box1_55: 1498953143
+      Music_box1_56: -737120473
+      Music_box1_57: -617773203
+      Music_box1_58: 62871274
+      Music_box1_59: -1586682426
+      Music_box1_6: -1623497939
+      Music_box1_60: 7497292
+      Music_box1_61: 682265921
+      Music_box1_62: -145394002
+      Music_box1_63: -111168690
+      Music_box1_64: 340592119
+      Music_box1_65: -57629336
+      Music_box1_66: 1206752058
+      Music_box1_67: -607357709
+      Music_box1_68: -1450308432
+      Music_box1_69: 1227694802
+      Music_box1_7: -715562163
+      Music_box1_70: 1076199416
+      Music_box1_8: 583190522
+      Music_box1_9: -1632899073
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
