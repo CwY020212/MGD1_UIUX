@@ -48,6 +48,7 @@ public class Exit : MonoBehaviour
             if (StaticData.isHiding == true)
             {
                 StaticData.isHiding = false;
+                Check.closebutton.SetActive(false);
                 Player.SetActive(true);
                 HidingCanvas.SetActive(false);
                 MainUI.SetActive(true);

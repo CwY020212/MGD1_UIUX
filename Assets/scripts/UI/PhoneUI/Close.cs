@@ -39,7 +39,7 @@ public class Close : MonoBehaviour
         if (movement.isPaused == false)
         {
             Phone_UI.SetActive(false);
-            if (movement.isActiveAndEnabled == true)
+            if (movement.isActiveAndEnabled == true &&!StaticData.isHiding)
                 MainInGame_UI.SetActive(true);
         }
     }

@@ -27,7 +27,10 @@ public class ClosePause : MonoBehaviour
             movement.isPaused = true;
 
         PauseMenu.SetActive(false);
-        MainInGameUI.SetActive(true);
+        if (!StaticData.isHiding)
+        {
+            MainInGameUI.SetActive(true);
+        }
         StaticData.isPaused = false;
     }
 }

@@ -41,9 +41,15 @@ public class Interact : MonoBehaviour
     public bool FakeWallInRange = false;
     public GameObject FakeWall;
     public GameObject Load;
+
+    public GameObject closebutton;
     // Update is called once per frame
     void Update()
     {
+        if(HidingCanvas.activeInHierarchy)
+        {
+            closebutton.SetActive(true);
+        }
         if (Check.InCoolDown == true)
         {
             Cooldown_Time -= Time.deltaTime;
