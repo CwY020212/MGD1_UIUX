@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +11,7 @@ public class Tutorial : MonoBehaviour
     public GameObject Image2;
     public GameObject Image3;
     public GameObject Image4;
+    public GameObject Image5;
 
     [Header("Text Changing")]
     public TMP_Text Tutor;
@@ -26,6 +26,12 @@ public class Tutorial : MonoBehaviour
     private int Maximum;
     private void Start()
     {
+        if(StaticData.deadcount >= 1)
+        {
+            HUD.SetActive(true);
+            MainUI.SetActive(true);
+            TutorialPage.SetActive(false);
+        }
         Maximum = LinesToBeShown.Length;
         Tutor.text = LinesToBeShown[0];
     }
@@ -41,28 +47,74 @@ public class Tutorial : MonoBehaviour
             Image2.SetActive(false);
             Image3.SetActive(false);
             Image4.SetActive(false);
+            Image5.SetActive(false);
         }
+
         if (Lines_Index == 2)
         {
             Image1.SetActive(true);
+            Image2.SetActive(false);
             Image3.SetActive(true);
+            Image4.SetActive(false);
+            Image5.SetActive(false);
         }
-        if(Lines_Index == 3)
+        if (Lines_Index == 3)
         {
             Image1.SetActive(false);
             Image3.SetActive(false);
             Image2.SetActive(true);
+            Image4.SetActive(false);
+            Image5.SetActive(false);
         }
-        if(Lines_Index == 6)
+        if (Lines_Index == 4)
         {
+            Image1.SetActive(false);
+            Image2.SetActive(true);
+            Image3.SetActive(false);
+            Image4.SetActive(false);
+            Image5.SetActive(false);
+        }
+        if (Lines_Index == 5)
+        {
+            Image1.SetActive(false);
             Image2.SetActive(false);
+            Image3.SetActive(false);
+            Image4.SetActive(false);
+            Image5.SetActive(false);
+        }
+        if (Lines_Index == 6)
+        {
+            Image1.SetActive(false);
+            Image2.SetActive(false);
+            Image3.SetActive(false);
+            Image4.SetActive(false);
+            Image5.SetActive(true);
+        }
+        if (Lines_Index == 7)
+        {
+            Image1.SetActive(false);
+            Image2.SetActive(false);
+            Image3.SetActive(false);
             Image4.SetActive(true);
+            Image5.SetActive(false);
         }
         if (Lines_Index == 8)
         {
-            Image4.SetActive(false);
+            Image1.SetActive(false);
+            Image2.SetActive(false);
+            Image3.SetActive(false);
+            Image4.SetActive(true);
+            Image5.SetActive(false);
         }
-        if(Lines_Index >= Maximum)
+        if (Lines_Index == 9)
+        {
+            Image1.SetActive(false);
+            Image2.SetActive(false);
+            Image3.SetActive(false);
+            Image4.SetActive(false);
+            Image5.SetActive(false);
+        }
+        if (Lines_Index >= Maximum)
         {
             HUD.SetActive(true);
             MainUI.SetActive(true);
@@ -82,6 +134,7 @@ public class Tutorial : MonoBehaviour
                 Image2.SetActive(false);
                 Image3.SetActive(false);
                 Image4.SetActive(false);
+                Image5.SetActive(false);
             }
 
             if (Lines_Index == 2)
@@ -90,6 +143,7 @@ public class Tutorial : MonoBehaviour
                 Image2.SetActive(false);
                 Image3.SetActive(true);
                 Image4.SetActive(false);
+                Image5.SetActive(false);
             }
             if (Lines_Index == 3)
             {
@@ -97,13 +151,15 @@ public class Tutorial : MonoBehaviour
                 Image3.SetActive(false);
                 Image2.SetActive(true);
                 Image4.SetActive(false);
+                Image5.SetActive(false);
             }
             if (Lines_Index == 4)
             {
                 Image1.SetActive(false);
-                Image2.SetActive(false);
+                Image2.SetActive(true);
                 Image3.SetActive(false);
-                Image4.SetActive(true);
+                Image4.SetActive(false);
+                Image5.SetActive(false);
             }
             if (Lines_Index == 5)
             {
@@ -111,6 +167,39 @@ public class Tutorial : MonoBehaviour
                 Image2.SetActive(false);
                 Image3.SetActive(false);
                 Image4.SetActive(false);
+                Image5.SetActive(false);
+            }
+            if (Lines_Index == 6)
+            {
+                Image1.SetActive(false);
+                Image2.SetActive(false);
+                Image3.SetActive(false);
+                Image4.SetActive(false);
+                Image5.SetActive(true);
+            }
+            if (Lines_Index == 7)
+            {
+                Image1.SetActive(false);
+                Image2.SetActive(false);
+                Image3.SetActive(false);
+                Image4.SetActive(true);
+                Image5.SetActive(false);
+            }
+            if (Lines_Index == 8)
+            {
+                Image1.SetActive(false);
+                Image2.SetActive(false);
+                Image3.SetActive(false);
+                Image4.SetActive(true);
+                Image5.SetActive(false);
+            }
+            if (Lines_Index == 9)
+            {
+                Image1.SetActive(false);
+                Image2.SetActive(false);
+                Image3.SetActive(false);
+                Image4.SetActive(false);
+                Image5.SetActive(false);
             }
         }
     }

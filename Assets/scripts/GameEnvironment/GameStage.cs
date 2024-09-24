@@ -2,7 +2,6 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -151,10 +150,12 @@ public class GameStage : MonoBehaviour
         {
             AudioManager.Clear(AudioManager.Music);
             AudioManager.PlayBackgroundSound(AudioManager.Background_EndStage);
-            StaticData.LineToBeShown = "Last Game Stage";
-            movement.movespeed = 1200.0f;
-            HiddenKey.SetActive(true);
-            Cloak.SetActive(true);
+            StaticData.LineToBeShown = "Find the Body";
+            movement.movespeed = 150.0f;
+            if(!HiddenKey.activeInHierarchy)
+                HiddenKey.SetActive(true);
+            if(!Cloak.activeInHierarchy)
+                Cloak.SetActive(true);
             Ghost.speed = 3.0f;
             Ghost.waitTime = 0.5f;
             StaticData.BatteryLife = 10;
@@ -164,8 +165,11 @@ public class GameStage : MonoBehaviour
 
             Wall.SetActive(false);
             Trigger.SetActive(false);
-            interact.SubIntButton.SetActive(true);
-            interact.SubIntButton_Cloak.SetActive(true);
+            if(StaticData.HolyWater)
+                interact.SubIntButton.SetActive(true);
+            if(StaticData.Cloak)
+                interact.SubIntButton_Cloak.SetActive(true);
+            YesCheck = false;
         }
     }
 
@@ -178,8 +182,11 @@ public class GameStage : MonoBehaviour
 
     public void NoYes()
     {
-        if(NoCheck == true)
+        if (NoCheck == true)
+        {
             SceneManager.LoadScene(3); // Ending First
+            NoCheck = false;
+        }
     }
 
     public void NoNo()

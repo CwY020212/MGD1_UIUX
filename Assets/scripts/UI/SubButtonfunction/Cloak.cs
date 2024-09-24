@@ -28,6 +28,7 @@ public class Cloak : MonoBehaviour
                 StaticData.Cloak = false;
                 this.enabled = false;
                 StaticData.LineToBeShown = "Invisible finish";
+                this.gameObject.SetActive(false);
             }
         }
     }
@@ -36,7 +37,7 @@ public class Cloak : MonoBehaviour
     {
         if (StaticData.Cloak == true)
         {
-            Player.tag = "EditorOnly";
+            Player.tag = "HidingSpot";
             Pressed = true;
             StaticData.LineToBeShown = "You are now invisible";
         }

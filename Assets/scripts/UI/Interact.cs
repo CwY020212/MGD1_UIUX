@@ -54,6 +54,107 @@ public class Interact : MonoBehaviour
                 StaticData.LineToBeShown = "Hiding Cooldown Finish";
             }
         }
+
+        {
+            if (StaticData.HolyWater)
+            {
+                Destroy(Items[0]);
+            }
+            if (StaticData.Crucifix)
+            {
+                Destroy(Items[1]);
+            }
+            if (StaticData.Salt)
+            {
+                Destroy(Items[2]);
+            }
+            if (StaticData.Pepper)
+            {
+                Destroy(Items[3]);
+            }
+            if (StaticData.Hammer)
+            {
+                Destroy(Items[4]);
+            }
+            if (StaticData.Key1)
+            {
+                Destroy(Items[5]);
+            }
+            if (StaticData.Key2)
+            {
+                Destroy(Items[6]);
+            }
+            if (StaticData.Key3)
+            {
+                Destroy(Items[7]);
+            }
+            if (StaticData.Key4)
+            {
+                Destroy(Items[8]);
+            }
+            if (StaticData.HiddenKey)
+            {
+                Items[9].SetActive(false);
+            }
+
+            //Notes
+            if(StaticData.Note1)
+            {
+                Destroy(Notes[0]);
+            }
+            if (StaticData.Note2)
+            {
+                Destroy(Notes[1]);
+            }
+            if (StaticData.Note3)
+            {
+                Destroy(Notes[2]);
+            }
+            if (StaticData.Note4)
+            {
+                Destroy(Notes[3]);
+            }
+            if (StaticData.Note5)
+            {
+                Destroy(Notes[4]);
+            }
+            if (StaticData.Note6)
+            {
+                Destroy(Notes[5]);
+            }
+            if (StaticData.Note7)
+            {
+                Destroy(Notes[6]);
+            }
+            if (StaticData.Note8)
+            {
+                Destroy(Notes[7]);
+            }
+            if (StaticData.Note9)
+            {
+                Destroy(Notes[8]);
+            }
+            if (StaticData.Note10)
+            {
+                Destroy(Notes[9]);
+            }
+            if (StaticData.Note11)
+            {
+                Destroy(Notes[10]);
+            }
+            if (StaticData.Note12)
+            {
+                Destroy(Notes[11]);
+            }
+            if (StaticData.Note13)
+            {
+                Destroy(Notes[12]);
+            }
+            if (StaticData.Note14)
+            {
+                Destroy(Notes[13]);
+            }
+        }
     }
 
     public void OnButtonClick()
@@ -183,7 +284,7 @@ public class Interact : MonoBehaviour
                     StaticData.HiddenKey = true;
                     StaticData.LineToBeShown = "Hidden Key x 1";
                     AudioManager.PlaySFXsound(AudioManager.PickUp);
-                    Destroy(Items[9]);
+                    Items[9].SetActive(false);
                     StartCoroutine(Wait(Item_TextForEditor[9]));
 
                 }

@@ -18,7 +18,7 @@ public class Volume : MonoBehaviour
         SFX_slider.value = 0.5f;
         Music.volume = 0.5f;
         SFX.volume = 0.5f;
-        Ghost.volume = 0.5f;
+        Ghost.volume = 1.0f;
     }
 
     public void MusicVolume()

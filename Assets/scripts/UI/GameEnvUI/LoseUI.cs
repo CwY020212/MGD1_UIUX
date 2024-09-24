@@ -10,7 +10,6 @@ public class LoseUI : MonoBehaviour
     public string[] lines;
     private string linetobeshown;
     private int rdnumber;
-
     private void Start()
     {
         rdnumber = (int)Random.Range(1, 5);
@@ -41,6 +40,7 @@ public class LoseUI : MonoBehaviour
 
     public void restart()
     {
-        SceneManager.LoadScene(1);
+        StaticData.deadcount++;
+        SceneManager.LoadScene(2);
     }    
 }

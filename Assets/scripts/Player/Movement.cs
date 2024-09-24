@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    public float movespeed = 800.0f;
+    public float movespeed = 100.0f;
     private float hor;
     private float Ver;
     public bool isPaused = false;
@@ -70,12 +70,12 @@ public class Movement : MonoBehaviour
 
         if(rb.velocity.x < 0)
         {
-            Capsule.transform.localScale= new Vector3(0.7f,0.55f,1.0f);
+            Capsule.transform.localScale= new Vector2(0.7f,0.55f);
         
         }
         else if(rb.velocity.x > 0)
         {
-            Capsule.transform.localScale = new Vector3(-0.7f, 0.55f, 1.0f);
+            Capsule.transform.localScale = new Vector2(-0.7f, 0.55f);
         }
 
 

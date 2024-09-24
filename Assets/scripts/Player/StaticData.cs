@@ -2,12 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
-using UnityEditor.Search;
 using UnityEngine;
 
 public class StaticData : MonoBehaviour
 {
     public static float brightness = 50;
+
+    public static int deadcount =0;
 
     public static int diff; //0 = ez, 1 = normal, 2 = hard
 

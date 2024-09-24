@@ -19,6 +19,7 @@ public class HolyWater : MonoBehaviour
                 timer = 10.0f;
                 this.enabled = false;
                 StaticData.LineToBeShown = "Stun finished";
+                this.gameObject.SetActive(false);
             }
         }
     }
