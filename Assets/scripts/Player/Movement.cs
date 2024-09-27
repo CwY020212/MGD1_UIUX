@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Terresquall;
 using UnityEngine.Rendering;
+using Cinemachine;
+using Unity.VisualScripting;
 
 public class Movement : MonoBehaviour
 {
@@ -37,8 +39,9 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private Animator Animate;
 
+    [SerializeField] private GameObject WarningCheck;
+    [SerializeField] private CinemachineVirtualCamera VirtualCamera; 
     public GameSceneMusic MusicManager;
-
     private void Start()
     {
         layerindex = this.gameObject.GetComponent<SortingGroup>().sortingOrder;
@@ -56,6 +59,18 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(WarningCheck.activeInHierarchy)
+        {
+            Animate.SetBool("IsWarning", true);
+            if(VirtualCamera.m_Lens.OrthographicSize >=2.0f)
+            VirtualCamera.m_Lens.OrthographicSize -= 0.01f;
+        }
+        else
+        {
+            Animate.SetBool("IsWarning", false);
+            if(VirtualCamera.m_Lens.OrthographicSize <=3.5f)
+            VirtualCamera.m_Lens.OrthographicSize +=0.01f;
+        }
         
         if (isPaused == false)
         {

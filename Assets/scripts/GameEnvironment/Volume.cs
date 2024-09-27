@@ -14,11 +14,11 @@ public class Volume : MonoBehaviour
 
     private void Start()
     {
-        Music_slider.value = 0.5f;
+        Music_slider.value = 0.05f;
         SFX_slider.value = 0.5f;
-        Music.volume = 0.5f;
+        Music.volume = 0.05f;
         SFX.volume = 0.5f;
-        Ghost.volume = 1.0f;
+        Ghost.volume = 0.5f;
     }
 
     public void MusicVolume()

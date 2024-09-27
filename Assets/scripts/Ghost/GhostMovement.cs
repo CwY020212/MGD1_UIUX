@@ -16,6 +16,7 @@ public class GhostMovement : MonoBehaviour
     public GameSceneMusic AudioManager;
     public HolyWater holyWater;
     public Movement movement;
+    private bool played;
     private void Update()
     {
         //to check which point should the ghost go to
@@ -38,6 +39,10 @@ public class GhostMovement : MonoBehaviour
                     if (!holyWater.Stunned)
                     {
                         transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPointIndex].position, speed * Time.deltaTime);
+                        
+                        if(!played)
+                            AudioManager.GhostRoar(AudioManager.Ghost_Background);
+                        played = true;
                     }
                 }
                 else
@@ -47,6 +52,7 @@ public class GhostMovement : MonoBehaviour
                         AudioManager.GhostRoar(AudioManager.Ghost_Roar);
                         StartCoroutine(WaitForCurrent());
                         once = true;
+                        played = false;
                     }
                 }
             }
@@ -61,6 +67,7 @@ public class GhostMovement : MonoBehaviour
                 {
                     if (once == false)
                     {
+                        AudioManager.GhostRoar(AudioManager.Ghost_Roar);
                         StartCoroutine(WaitForPrioritized());
                         once = true;
                     }

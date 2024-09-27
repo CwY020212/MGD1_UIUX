@@ -112,7 +112,7 @@ public class GameStage : MonoBehaviour
     {
         yield return new WaitForSeconds(3.0f);
         GameCheckCanvas.SetActive(true);
-        Player.transform.position = new Vector3(-9, -14, 0);
+        Player.transform.position = new Vector3(9, -14, 0);
     }
 
     public void Yes()

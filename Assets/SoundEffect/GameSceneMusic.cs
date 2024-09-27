@@ -23,6 +23,7 @@ public class GameSceneMusic : MonoBehaviour
     public AudioClip WalkingSound1;
     public AudioClip WalkingSound2;
     public AudioClip Connected;
+    public AudioClip Ghost_Background;
 
     // Start is called before the first frame update
     void Start()

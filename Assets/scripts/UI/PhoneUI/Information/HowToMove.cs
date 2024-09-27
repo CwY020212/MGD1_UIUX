@@ -9,17 +9,6 @@ public class HowToMove : MonoBehaviour
     [SerializeField] private GameObject Panel1;
     [SerializeField] private GameObject Panel2;
     [SerializeField] private GameObject Panel3;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void HowToMovePage()
     {
@@ -28,21 +17,44 @@ public class HowToMove : MonoBehaviour
         Panel3.SetActive(false);
         Webpage.text = "Game Movement:" +
             "<br>" +
-            "<br>Virtual Joystick   -   Movement" +
-            "<br>Hand Button        -   Interaction" +
-            "<br>Phone Button       -   Sabotage and information purpose" +
-            "<br>Bag Button         -   Inventory system(to check what you get)" +
-            "<br>Holy Water Button  -   To stun the ghost" +
-            "<br>Cloask Button      -   To be invisible" +
-            "<br>Pause Button       -   To adjust overall game setting" +
+            "<br>Virtual Joystick:" +
+            "<br>Movement" +
+            "<br>" +
+            "<br>Hand Button:" +
+            "<br>Interaction" +
+            "<br>" +
+            "<br>Phone Button:" +
+            "<br>Sabotage and information purpose" +
+            "<br>" +
+            "<br>Bag Button:" +
+            "<br>Inventory system(to check what you get)" +
+            "<br>" +
+            "<br>Holy Water Button:" +
+            "<br>To stun the ghost" +
+            "<br>" +
+            "<br>Cloask Button:" +
+            "<br>To be invisible" +
+            "<br>" +
+            "<br>Pause Button:" +
+            "<br>To adjust overall game setting" +
+            "<br>" +
             "<br>" +
             "<br>Game UI Recognization:" +
             "<br>" +
-            "<br>Red Screen         -   Penanggal is around you(causing player to be hard to interact with objects)" +
-            "<br>Yellow Button(Glow)-   Interactable items around you" +
-            "<br>Connect Button     -   To create distraction in ghost's path" +
-            "<br>Notes Button       -   To check the game story" +
-            "<br>Setting Button     -   To adjust In-game setting";
+            "<br>Camera Zoom In:" +
+            "<br>Penanggal is around you(causing player to be hard to interact with objects)" +
+            "<br>" +
+            "<br>Yellow Button(Glow):" +
+            "<br>Interactable items around you" +
+            "<br>" +
+            "<br>Connect Button:" +
+            "<br>To create distraction in ghost's path" +
+            "<br>" +
+            "<br>Notes Button:" +
+            "<br>To check the game story" +
+            "<br>" +
+            "<br>Setting Button:" +
+            "<br>To adjust In-game setting";
 
     }
 }
